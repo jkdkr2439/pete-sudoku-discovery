@@ -48,3 +48,17 @@ Event names alone do not show what executes. The observer needs a phase-to-sourc
 The current interface is correct but visually diffuse. The headline consumes too much first-screen space, the three architecture cards repeat prose without showing live process state, and the strongest visual contrast belongs to static typography rather than the running system. The authoritative board is correctly dominant; Sandbox is correctly smaller; Live Code Route is useful but appears as a detached card.
 
 Candidate collapse: turn the page into one coherent laboratory console. Use a compact identity header, a live phase rail, one large authoritative world panel and one instrument column containing Sandbox and current source. Preserve the warm paper palette while using dark navy only where source code and runtime focus require it.
+
+## 2026-09-14 - G6: imagination capacity versus Sandbox mechanism
+
+Imagination and Sandbox are different abstraction levels. Imagination names a general cognitive capacity: construct possibilities that are not presently committed to the external world. Sandbox names a concrete bounded mechanism: clone a public state, apply reversible transformations, compare them with the learned Fieldmap and discard failed branches.
+
+The current system contains one Sandbox implementation and no second Imagination engine. The apparent instant solve is an observer-resolution failure: recursive search completes between 400 ms UI polls. The correction is to expose transformation events and partial structures, not to pretend a second cognitive module exists.
+
+## G6 observer gap found during live capture
+
+The first live screenshot captured a partial board, active-cell highlight and TRY instruction, but the source viewer scrolled below the focused assignment. The cause was a document-relative offset applied to the code panel scroll container. The offset is now normalized against the code element, keeping the actual matching source line in view.
+
+## G6 live verification
+
+A clean server run produced 64 observable Sandbox states for 31 tries. The snapshot reported 64 steps, exactly 64 new JSONL records were appended, and the final record was COMPLETE with instruction return True. The substrate then reported SOLVED with no runtime error.

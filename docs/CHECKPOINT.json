@@ -1,6 +1,6 @@
 {
   "schema": "pete.sudoku-discovery.checkpoint.v1",
-  "checkpoint": "G5-DESIGN-ENGINE-UI",
+  "checkpoint": "G6-OBSERVABLE-SANDBOX",
   "date": "2026-09-14",
   "status": "PASS",
   "claim": "A hidden 9x9 Sudoku substrate can ground an explicit dynamic Fieldmap through embodied interaction, and that Fieldmap can support counterfactual completion without a validator callback.",
@@ -148,5 +148,37 @@
     "dom_contract": "PASS",
     "javascript_syntax": "PASS",
     "final_render": "runtime/ui-g5-final.png"
+  },
+  "observable_sandbox": {
+    "imagination": "system-level capacity",
+    "sandbox": "single bounded executable counterfactual workspace",
+    "separate_engines": false,
+    "operations": [
+      "BEGIN",
+      "SCAN",
+      "TRY",
+      "BACKTRACK",
+      "COMPLETE"
+    ],
+    "partial_board_stream": true,
+    "active_cell": true,
+    "source_line_focus": true,
+    "persistent_log": "runtime/logs/sandbox-trace.jsonl",
+    "observer_step_delay_seconds": 0.07,
+    "observer_delay_limit": 160,
+    "decision_feedback_from_observer": false,
+    "live_world": {
+      "sequence": 179,
+      "tries": 76,
+      "result": "SOLVED",
+      "error": null
+    },
+    "log_verification": {
+      "snapshot_steps": 64,
+      "new_jsonl_lines": 64,
+      "first_operation": "BEGIN",
+      "last_operation": "COMPLETE",
+      "authoritative_result": "SOLVED"
+    }
   }
 }

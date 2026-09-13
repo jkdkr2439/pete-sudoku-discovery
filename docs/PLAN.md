@@ -109,3 +109,20 @@ Make the observer surface readable as a scientific instrument: the user should i
 ## G5 result - 2026-09-14
 
 PASS after three render loops. The observer now behaves as one laboratory console: compact runtime identity, live IPOD phase rail, dense evidence strip, dominant authoritative board, small Sandbox, adjacent real-source route, dynamic Fieldmap clauses and event journal. Desktop renders at 1600 x 1300 and 1280 x 900 preserve hierarchy and avoid horizontal overflow.
+
+## G6 - Observable Sandbox execution
+
+### Architectural distinction
+- Imagination is Pete's broad capacity to construct and compare absent possibilities.
+- Sandbox is the bounded executable workspace currently used to realize one form of imagination.
+- There is one concrete Sandbox engine in this experiment; Imagination is not a second hidden solver.
+
+### Goal chain
+1. Convert synchronous final-only Sandbox output into observable structural steps.
+2. Expose BEGIN, SCAN, TRY, BACKTRACK and COMPLETE with partial board state.
+3. Pace only the observer server; keep tests and core computation unthrottled.
+4. Highlight the active cell, operation, code-like instruction and matching source line.
+5. Verify that trace output does not import or query substrate authority.
+## G6 result - 2026-09-14
+
+PASS. Sandbox now exposes BEGIN, SCAN, TRY, BACKTRACK and COMPLETE transformations with partial board snapshots, active cells, candidate sets, instructions and matching source focus. The observer server paces only the first 160 display steps; core tests run without delay. Every transformation is persisted to runtime/logs/sandbox-trace.jsonl. A live 9x9 run exposed 179 states and 76 tries before authoritative SOLVED.

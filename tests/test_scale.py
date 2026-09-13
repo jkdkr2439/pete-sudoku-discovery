@@ -1,4 +1,6 @@
+import json
 import tempfile
+from pathlib import Path
 import unittest
 
 from pete_discovery.runtime import ExperimentRuntime
@@ -16,6 +18,17 @@ class ScaleEvidenceTests(unittest.TestCase):
             result = runtime.agent.solve_current()
             self.assertEqual(result["status"], "SOLVED")
             self.assertLess(result["sandbox"]["attempts"], 5000)
+            operations = [step["operation"] for step in result["sandbox"]["recent_ops"]]
+            self.assertIn("SCAN", operations)
+            self.assertIn("TRY", operations)
+            self.assertEqual(result["sandbox"]["operation"], "COMPLETE")
+            self.assertTrue(result["sandbox"]["instruction"])
+            trace_path = Path(folder) / "logs" / "sandbox-trace.jsonl"
+            records = [json.loads(line) for line in trace_path.read_text(encoding="utf-8").splitlines()]
+            self.assertEqual(records[0]["operation"], "BEGIN")
+            self.assertEqual(records[-1]["operation"], "COMPLETE")
+            self.assertTrue(any(record["operation"] == "TRY" for record in records))
+            self.assertEqual(runtime.snapshot()["sandbox_log"]["steps"], len(records))
 
 
 if __name__ == "__main__":

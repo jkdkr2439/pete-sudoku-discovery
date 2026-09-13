@@ -8,11 +8,12 @@ from .sandbox import Sandbox
 class DiscoveryAgent:
     """Generic experiment -> relation induction -> counterfactual -> action loop."""
 
-    def __init__(self, body, fieldmap, event=None):
+    def __init__(self, body, fieldmap, event=None, sandbox_observer=None):
         self.body = body
         self.fieldmap = fieldmap
         self.sandbox = Sandbox(fieldmap)
         self.event = event or (lambda kind, data: None)
+        self.sandbox_observer = sandbox_observer
         self.phase = "IDLE"
         self.metrics = {}
         self.sandbox_state = None
@@ -20,6 +21,18 @@ class DiscoveryAgent:
     def _emit(self, kind, **data):
         self.event(kind, data)
 
+    def _observe_sandbox(self, state):
+        self.sandbox_state = state
+        self._emit(
+            "sandbox_step",
+            operation=state["operation"],
+            sequence=state["sequence"],
+            attempts=state["attempts"],
+            position=state["active_cell"],
+            instruction=state["instruction"],
+        )
+        if self.sandbox_observer is not None:
+            self.sandbox_observer(state)
     def discover(self, size):
         self.phase = "PHYSICAL_EXPERIMENT"
         cells = list(range(size * size))
@@ -75,7 +88,7 @@ class DiscoveryAgent:
         self.phase = "SANDBOX"
         packet = self.body.reset_challenge()
         public = packet["vision"]
-        sandbox = self.sandbox.complete(public)
+        sandbox = self.sandbox.complete(public, observe=self._observe_sandbox)
         self.sandbox_state = sandbox
         self._emit("sandbox", found=sandbox["found"], attempts=sandbox["attempts"])
         if not sandbox["found"]:

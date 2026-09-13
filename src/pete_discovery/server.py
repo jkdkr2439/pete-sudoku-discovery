@@ -67,7 +67,7 @@ CODE_CATALOG = code_catalog()
 
 class App:
     def __init__(self, root):
-        self.runtime = ExperimentRuntime(root)
+        self.runtime = ExperimentRuntime(root, sandbox_step_delay=0.07)
 
     def code_state(self):
         phase = self.runtime.agent.phase

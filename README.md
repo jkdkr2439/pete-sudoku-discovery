@@ -8,7 +8,8 @@ The repository contains no LLM, pretrained weights, training corpus, or Sudoku r
 
 - **Substrate** is the external rule world: hidden constraints, state transitions, life consequences, puzzle generation and independent grading.
 - **Fieldmap** is Pete's dynamic internal model: evidence-weighted relation nodes collapsed from experience. It is analogous to changing weights, but remains explicit and inspectable.
-- **Sandbox** is a sandboxed process: it uses the current Fieldmap to try possible states. It cannot ask the substrate whether an Sandbox move is correct.
+- **Sandbox** is a bounded executable workspace: it uses the current Fieldmap to try possible states. It cannot ask the substrate whether a Sandbox move is correct.
+- **Imagination** is the broader capacity to construct absent possibilities. In this repository it is realized by Sandbox; it is not a second solver.
 
 ## Run
 

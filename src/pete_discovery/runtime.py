@@ -13,7 +13,7 @@ from .substrate import SudokuSubstrate
 
 
 class ExperimentRuntime:
-    def __init__(self, root="runtime", *, size=9, level=0, seed=1):
+    def __init__(self, root="runtime", *, size=9, level=0, seed=1, sandbox_step_delay=0.0):
         self.root = Path(root)
         self.root.mkdir(parents=True, exist_ok=True)
         self.lock = Lock()
@@ -31,7 +31,10 @@ class ExperimentRuntime:
         self.last_receipt = None
         self.worlds_completed = 0
         self.history = []
-        self.agent = DiscoveryAgent(self.body, self.fieldmap, self._event)
+        self.sandbox_step_delay = max(0.0, float(sandbox_step_delay))
+        self.sandbox_steps = 0
+        self.sandbox_trace_path = self.root / "logs" / "sandbox-trace.jsonl"
+        self.agent = DiscoveryAgent(self.body, self.fieldmap, self._event, self._pace_sandbox)
 
     def _event(self, kind, data):
         with self.lock:
@@ -39,6 +42,28 @@ class ExperimentRuntime:
             self.events.append(row)
             self.events = self.events[-120:]
 
+    def _pace_sandbox(self, state):
+        # Observation and pacing never change search choices or feed data into cognition.
+        self.sandbox_steps += 1
+        latest = state["recent_ops"][-1]
+        record = {
+            "time": time(),
+            "world_id": self.world.observe()["world_id"],
+            "sequence": state["sequence"],
+            "operation": state["operation"],
+            "position": state["active_cell"],
+            "value": latest["value"],
+            "candidates": latest["candidates"],
+            "instruction": state["instruction"],
+            "focus": state["focus"],
+            "attempts": state["attempts"],
+            "fieldmap_version": state["fieldmap_version"],
+            "board": state["board"],
+        }
+        with self.sandbox_trace_path.open("a", encoding="utf-8") as handle:
+            handle.write(json.dumps(record, separators=(",", ":")) + "\n")
+        if self.sandbox_step_delay and state["sequence"] <= 160:
+            sleep(self.sandbox_step_delay)
     def _begin(self, continuous):
         if self.running:
             return False
@@ -105,7 +130,7 @@ class ExperimentRuntime:
     def _advance_world(self, clear_events=False):
         previous = self.world.observe()["world_id"]
         observation = self.world.next_world()
-        self.agent = DiscoveryAgent(self.body, self.fieldmap, self._event)
+        self.agent = DiscoveryAgent(self.body, self.fieldmap, self._event, self._pace_sandbox)
         if clear_events:
             self.events = []
         self._event("world_advanced", {
@@ -193,6 +218,7 @@ class ExperimentRuntime:
             "sandbox": self.agent.sandbox_state,
             "metrics": dict(self.agent.metrics),
             "journal": {"events": self.journal.sequence, "head": self.journal.previous},
+            "sandbox_log": {"steps": self.sandbox_steps, "path": str(self.sandbox_trace_path)},
             "events": events,
             "separation": {
                 "substrate": "authoritative hidden constraints and consequences",

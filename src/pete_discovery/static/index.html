@@ -91,7 +91,14 @@
         </div>
         <div class="sandbox-body">
           <div id="sandbox-board" class="board ghost"></div>
-          <div class="sandbox-copy"><b>Fieldmap only</b><span>No substrate import<br>No validator callback</span></div>
+          <div class="sandbox-console">
+            <span class="section-tag violet">CURRENT TRANSFORMATION</span>
+            <strong id="sandbox-operation" aria-live="polite">WAITING</strong>
+            <code id="sandbox-instruction">No internal operation yet</code>
+            <div class="sandbox-meta"><span id="sandbox-position">CELL —</span><span id="sandbox-candidates">CANDIDATES —</span></div>
+            <div id="sandbox-trace" class="sandbox-trace"></div>
+            <p><b>Fieldmap only</b> · no substrate validator<br><span id="sandbox-log-path">runtime/logs/sandbox-trace.jsonl</span></p>
+          </div>
         </div>
       </article>
 

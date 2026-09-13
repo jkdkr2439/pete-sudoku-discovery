@@ -40,3 +40,6 @@ The substrate generates deterministic, unique 9x9 boards only. Difficulty increa
 ## Current scope
 
 The experiment discovers binary incompatibility relations in finite grids. The relation vocabulary and controlled probe schedule are authored general cognitive primitives. They reduce the search space and are therefore real inductive biases. The experiment does not yet prove open-ended discovery, optimal experiment selection, or learning without any prior representational primitives.
+## Imagination and Sandbox
+
+Imagination is a system-level capacity to construct and compare possibilities absent from the authoritative world. Sandbox is the concrete finite workspace that currently implements counterfactual Sudoku completion. They are therefore two conceptual levels but one executable search engine in this repository. Sandbox receives only a public observation plus Fieldmap predictions; it never imports or calls substrate authority.
