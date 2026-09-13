@@ -91,7 +91,7 @@ def main():
 
     initial_frame = capture(args.url, work / "frame-000.png", profile, 0)
     frames.extend([initial_frame] * 8)
-    api(args.url + "/api/start", "POST")
+    api(args.url + "/api/start-once", "POST")
     states = []
     sequence = 1
     deadline = time.time() + 120

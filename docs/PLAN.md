@@ -64,3 +64,16 @@ PASS. All public entry points now create 9x9 worlds, alternate dimensions are re
 ## G2 result - 2026-09-14
 
 PASS. Fieldmap data is now stored as aggregated structural reactions with gap-indexed retrieval. Nine tests pass. A clean-start 44-frame MP4 records zero initial samples, clauses and journal events, followed by 6,480 physical reactions, three collapsed clauses, 100% held-out accuracy and an authoritative 9x9 SOLVED result.
+
+## G3 - One-start continuous play
+
+- Split one-world execution from the persistent scheduler.
+- Make /api/start launch the continuous scheduler and add /api/pause.
+- Advance the substrate automatically after each SOLVED world.
+- Preserve Fieldmap across worlds and expose completed-world history.
+- Keep /api/start-once for the reproducible proof recorder.
+- Add UI controls and tests for automatic progression and safe pause.
+
+## G3 result - 2026-09-14
+
+PASS. One Start solved two consecutive 9x9 worlds in the live server, automatically advanced the substrate, reused the same 6,480-sample three-clause Fieldmap without new samples, recorded both worlds, and honored Pause after the active world. Eleven tests pass.

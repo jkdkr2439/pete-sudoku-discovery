@@ -33,3 +33,7 @@ The experiment is restricted to Sudoku 9x9. Smaller grids are removed so success
 ## 2026-09-14 - G2: data as structural reaction
 
 An external signal is not the stored data. The system transition it causes is the data: S(t) --input--> S(t+1). The gap is a measured component of that reaction, containing prediction mismatch and structural mutations. Retrieval therefore resonates against gap signatures and affected relations rather than fetching a raw input record. Identical reactions are aggregated to keep memory bounded.
+
+## 2026-09-14 - G3: continuous world progression
+
+The observer Start action must activate an ongoing world loop, not one episode. After an authoritative SOLVED receipt, the substrate advances to the next 9x9 world while Fieldmap persists. The first seed ramps through three clue tiers; subsequent seeds provide unlimited hardest-tier worlds. Pause requests stop at a safe world boundary.

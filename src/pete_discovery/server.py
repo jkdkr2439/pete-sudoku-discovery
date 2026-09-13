@@ -44,9 +44,20 @@ class Handler(BaseHTTPRequestHandler):
     def do_POST(self):
         path = urlparse(self.path).path
         if path == "/api/start":
-            if not self.app.runtime.running:
-                Thread(target=self.app.runtime.run, daemon=True).start()
-            self._send(202, json.dumps({"accepted": True}), "application/json")
+            accepted = not self.app.runtime.running
+            if accepted:
+                Thread(target=self.app.runtime.run_continuous, daemon=True).start()
+            self._send(202 if accepted else 409, json.dumps({"accepted": accepted, "mode": "continuous"}), "application/json")
+            return
+        if path == "/api/start-once":
+            accepted = not self.app.runtime.running
+            if accepted:
+                Thread(target=self.app.runtime.run_once, daemon=True).start()
+            self._send(202 if accepted else 409, json.dumps({"accepted": accepted, "mode": "one-world"}), "application/json")
+            return
+        if path == "/api/pause":
+            accepted = self.app.runtime.request_pause()
+            self._send(202 if accepted else 409, json.dumps({"accepted": accepted, "boundary": "after-current-world"}), "application/json")
             return
         if path == "/api/new":
             changed = self.app.runtime.new_world()

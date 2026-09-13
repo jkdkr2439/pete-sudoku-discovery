@@ -14,7 +14,7 @@ The recording is an evidence artifact, not a hand-edited animation.
 
 1. Show the empty-start contract.
 2. Show the live observer UI before Start.
-3. Trigger `POST /api/start`.
+3. Trigger `POST /api/start-once` so the proof has one bounded world.
 4. Capture the actual UI throughout physical experimentation, Fieldmap collapse, held-out verification, imagination and physical commitment.
 5. Require final phase `SOLVED`; otherwise abort without claiming success.
 6. Encode captured frames to MP4 and write a JSON manifest containing source commit, initial state, timeline, final Fieldmap, verification metrics and journal head.

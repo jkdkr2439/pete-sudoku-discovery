@@ -18,7 +18,7 @@ $env:PYTHONPATH = "src"
 python -m pete_discovery.server --port 8792
 ```
 
-Open http://127.0.0.1:8792/ and press **Start discovery**.
+Open http://127.0.0.1:8792/ and press **Start continuous**.
 
 ## What "no training" means here
 
@@ -38,3 +38,7 @@ python tools/audit_boundaries.py
 - `docs/VIDEO_PROOF_PROTOCOL.md`: clean-start recording protocol.
 - `artifacts/proof/PETE_9X9_EMPTY_TO_SOLVED_20260914.mp4`: recorded run.
 - `artifacts/proof/PETE_9X9_EMPTY_TO_SOLVED_20260914.manifest.json`: machine-readable provenance and timeline.
+
+## Continuous play
+
+One Start keeps the scheduler active. After each authoritative SOLVED receipt, the substrate creates the next 9x9 puzzle and Fieldmap is retained. Three clue tiers are followed by unlimited hardest-tier worlds across new seeds. Pause stops after the current world reaches a safe boundary.

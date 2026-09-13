@@ -1,6 +1,6 @@
 {
   "schema": "pete.sudoku-discovery.checkpoint.v1",
-  "checkpoint": "G2-STRUCTURAL-REACTION-VIDEO",
+  "checkpoint": "G3-CONTINUOUS-9X9",
   "date": "2026-09-14",
   "status": "PASS",
   "claim": "A hidden 9x9 Sudoku substrate can ground an explicit dynamic Fieldmap through embodied interaction, and that Fieldmap can support counterfactual completion without a validator callback.",
@@ -61,13 +61,15 @@
     "No offline training occurs, but online lifetime learning does occur."
   ],
   "verification": {
-    "unittest": "9 tests passed",
+    "unittest": "11 tests passed",
     "boundary_audit": "PASS",
     "javascript_syntax": "PASS",
     "python_compileall": "PASS",
     "git_diff_check": "PASS",
     "video_initial_state_guard": "PASS",
-    "video_final_authority": "SOLVED"
+    "video_final_authority": "SOLVED",
+    "continuous_live": "2 worlds from one Start; PASS",
+    "safe_pause": "PASS"
   },
   "dynamic_data": {
     "stored_unit": "structural reaction",
@@ -97,6 +99,30 @@
       "baseline": 0.925,
       "imagination_attempts": 31,
       "journal_events": 20191
+    }
+  },
+  "continuous_play": {
+    "start_semantics": "one Start launches an unbounded world loop",
+    "world_count": "unlimited by deterministic seeds",
+    "difficulty_tiers": {
+      "clues": [
+        50,
+        40,
+        30
+      ],
+      "after_ramp": "new seeds remain at 30 clues"
+    },
+    "fieldmap_persists_between_worlds": true,
+    "pause_boundary": "after current world",
+    "live_evidence": {
+      "worlds_solved": 2,
+      "history_entries": 2,
+      "samples_before_second": 6480,
+      "samples_after_second": 6480,
+      "clauses": 3,
+      "pause_accepted": true,
+      "running_after_pause": false,
+      "error": null
     }
   }
 }
