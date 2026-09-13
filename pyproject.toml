@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pete-sudoku-discovery"
+version = "0.1.0"
+description = "A falsifiable substrate-to-Fieldmap Sudoku rule discovery experiment."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+pete-discovery = "pete_discovery.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pete_discovery = ["static/*"]
