@@ -113,13 +113,13 @@ class WorldReceipt:
 class SudokuSubstrate:
     """Authoritative world. Its internals are deliberately hidden from cognition."""
 
-    TIERS = {
-        4: (10, 8, 6),
-        9: (50, 40, 30),
-    }
+    SIZE = 9
+    TIERS = (50, 40, 30)
 
-    def __init__(self, size=4, level=0, seed=1):
+    def __init__(self, size=9, level=0, seed=1):
         self.size = int(size)
+        if self.size != self.SIZE:
+            raise ValueError("ONLY_9X9_WORLD_IS_AVAILABLE")
         self.level = int(level)
         self.seed = int(seed)
         self.action_index = 0
@@ -127,7 +127,7 @@ class SudokuSubstrate:
         self._load_challenge()
 
     def _load_challenge(self):
-        tiers = self.TIERS[self.size]
+        tiers = self.TIERS
         clues = tiers[min(self.level, len(tiers) - 1)]
         self._initial, self._solution = generate(self.size, clues, self.seed)
         self._board = self._initial
@@ -136,13 +136,10 @@ class SudokuSubstrate:
         self.mode = "challenge"
 
     def next_world(self):
-        tiers = self.TIERS[self.size]
+        tiers = self.TIERS
         self.level += 1
         if self.level >= len(tiers):
-            if self.size == 4:
-                self.size, self.level = 9, 0
-            else:
-                self.level = len(tiers) - 1
+            self.level = len(tiers) - 1
             self.seed += 1
         self._load_challenge()
         return self.observe()

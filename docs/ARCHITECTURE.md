@@ -35,7 +35,7 @@ It is executable rather than descriptive. The same proposed action always meets 
 
 ## Progressive worlds
 
-The substrate generates deterministic, unique 4x4 and 9x9 boards. Difficulty increases by clue removal. Puzzles are unlimited through seeds. A Fieldmap is reused across new puzzles at the same scale and reset when the scale changes, making within-scale transfer visible.
+The substrate generates deterministic, unique 9x9 boards only. Difficulty increases by clue removal across three tiers. Puzzles are unlimited through seeds, and a Fieldmap is reused across new 9x9 puzzles so transfer remains visible.
 
 ## Current scope
 

@@ -24,4 +24,8 @@ Use controlled two-token physical experiments. Describe each pair using a generi
 2. Physical probes change Fieldmap evidence and prediction accuracy.
 3. Imagination can find a completion using only the learned Fieldmap.
 4. The completion survives authoritative substrate commits.
-5. The same mechanism runs on 4x4 and 9x9 worlds without a cognition code change.
+5. The same mechanism transfers across unseen 9x9 worlds and increasing clue-removal tiers without a cognition code change.
+
+## 2026-09-14 - G1: one world scale only
+
+The experiment is restricted to Sudoku 9x9. Smaller grids are removed so successful evidence cannot be attributed to a toy-scale curriculum. Difficulty changes only through clue removal and seeds; cognition and its empty-start condition remain unchanged.

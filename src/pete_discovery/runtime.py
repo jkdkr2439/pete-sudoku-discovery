@@ -13,7 +13,7 @@ from .substrate import SudokuSubstrate
 
 
 class ExperimentRuntime:
-    def __init__(self, root="runtime", *, size=4, level=0, seed=1):
+    def __init__(self, root="runtime", *, size=9, level=0, seed=1):
         self.root = Path(root)
         self.root.mkdir(parents=True, exist_ok=True)
         self.lock = Lock()
@@ -78,10 +78,7 @@ class ExperimentRuntime:
     def new_world(self):
         if self.running:
             return False
-        previous_size = self.world.size
         self.world.next_world()
-        if self.world.size != previous_size:
-            self.fieldmap = DynamicFieldmap()
         self.agent = DiscoveryAgent(self.body, self.fieldmap, self._event)
         self.events = []
         return True

@@ -1,9 +1,22 @@
 {
   "schema": "pete.sudoku-discovery.checkpoint.v1",
-  "checkpoint": "G0",
+  "checkpoint": "G1-9X9-ONLY",
   "date": "2026-09-14",
   "status": "PASS",
-  "claim": "A hidden rule substrate can ground an explicit dynamic Fieldmap through embodied interaction, and that Fieldmap can support counterfactual completion without a validator callback.",
+  "claim": "A hidden 9x9 Sudoku substrate can ground an explicit dynamic Fieldmap through embodied interaction, and that Fieldmap can support counterfactual completion without a validator callback.",
+  "world_scope": {
+    "shape": [
+      9,
+      9
+    ],
+    "difficulty_clues": [
+      50,
+      40,
+      30
+    ],
+    "unlimited_seeded_generation": true,
+    "other_dimensions_rejected": true
+  },
   "boundaries": {
     "pretrained_model": false,
     "external_dataset": false,
@@ -13,26 +26,7 @@
     "hidden_solution_in_public_packet": false
   },
   "evidence": {
-    "4x4": {
-      "physical_samples": 240,
-      "collapsed_clauses": 3,
-      "unexplained_rejections": 0,
-      "held_out_cases": 240,
-      "empty_model_baseline": 0.766667,
-      "fieldmap_accuracy": 1.0,
-      "authoritative_result": "SOLVED",
-      "live_imagination_attempts": 6
-    },
-    "4x4_transfer": {
-      "next_difficulty_tier": 1,
-      "samples_before": 240,
-      "samples_after": 240,
-      "theory_reused": true,
-      "fieldmap_accuracy": 1.0,
-      "authoritative_result": "SOLVED",
-      "imagination_attempts": 8
-    },
-    "9x9": {
+    "empty_start_to_solution": {
       "physical_samples": 6480,
       "collapsed_clauses": 3,
       "unexplained_rejections": 0,
@@ -43,19 +37,34 @@
       "imagination_attempts": 51,
       "physical_actions": 13491,
       "elapsed_seconds": 14.621
+    },
+    "live_9x9": {
+      "seed": 1,
+      "difficulty_tier": 0,
+      "shape": [
+        9,
+        9
+      ],
+      "physical_samples": 6480,
+      "collapsed_clauses": 3,
+      "held_out_accuracy": 1.0,
+      "empty_model_baseline": 0.925,
+      "authoritative_result": "SOLVED",
+      "imagination_attempts": 31,
+      "hash_journal_events": 20191,
+      "error": null
     }
-  },
-  "verification": {
-    "unittest": "5 tests passed",
-    "boundary_audit": "PASS",
-    "javascript_syntax": "PASS",
-    "python_compileall": "PASS",
-    "git_diff_check": "PASS"
   },
   "limits": [
     "The generic relation vocabulary is authored and is an inductive bias.",
     "The physical experiment schedule is exhaustive rather than autonomously optimized.",
-    "The current world model learns binary incompatibility, not open-ended causal physics.",
     "No offline training occurs, but online lifetime learning does occur."
-  ]
+  ],
+  "verification": {
+    "unittest": "6 tests passed",
+    "boundary_audit": "PASS",
+    "javascript_syntax": "PASS",
+    "python_compileall": "PASS",
+    "git_diff_check": "PASS"
+  }
 }
