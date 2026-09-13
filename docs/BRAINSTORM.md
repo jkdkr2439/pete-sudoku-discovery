@@ -62,3 +62,9 @@ The first live screenshot captured a partial board, active-cell highlight and TR
 ## G6 live verification
 
 A clean server run produced 64 observable Sandbox states for 31 tries. The snapshot reported 64 steps, exactly 64 new JSONL records were appended, and the final record was COMPLETE with instruction return True. The substrate then reported SOLVED with no runtime error.
+
+## 2026-09-14 - G8: independent conceptual provenance and bounded claims
+
+The paper records the author's declaration that Kevin T. N. derived the conceptual architecture through first-principles reasoning without using an existing AI architecture as a design reference. Codex is disclosed as technical assistance for implementation, organization, testing, tracing, interface construction, and documentation. This origin statement is separate from novelty claims about ordinary programming primitives.
+
+The public claim must distinguish the mechanism available before a run from knowledge formed during a run. Pete has no pretrained neural tensor or task checkpoint. Fieldmap nevertheless acquires explicit dynamic relation weights online. The body interface, experiment scheduler, update/collapse operators, and generic Sandbox backtracking are authored mechanisms. The hidden Sudoku validator remains substrate law and is inaccessible to cognition.

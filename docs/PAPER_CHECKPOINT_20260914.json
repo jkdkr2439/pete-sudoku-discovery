@@ -1,0 +1,19 @@
+{
+  "checkpoint": "PAPER-G8",
+  "date": "2026-09-14",
+  "parent_goal": "Publish a repository-backed and falsifiable technical account of Pete's Sudoku experiment",
+  "status": "validated",
+  "canonical_paper": "docs/papers/PETE_STRUCTURAL_COGNITIVE_ARCHITECTURE_CANONICAL_2026.md",
+  "architecture_figure": "docs/papers/PETE_STRUCTURAL_ARCHITECTURE_2026.svg",
+  "validation": {
+    "tests": "12 passed in 33.11s",
+    "boundary_audit": "PASS",
+    "boundary_violations": 0
+  },
+  "known_evidence": {
+    "trace_revision": "17219bd",
+    "archived_trace_events": 104,
+    "archived_trace_attempts": 51,
+    "archived_trace_sha256": "69d738b1234782480cda3bf0d6b3901d180d081508f6cbc941d4143d284df0db"
+  }
+}

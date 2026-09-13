@@ -136,3 +136,15 @@ PASS. Sandbox now exposes BEGIN, SCAN, TRY, BACKTRACK and COMPLETE transformatio
 ## G7 result - 2026-09-14
 
 PASS. Cleanup removed 269.5 MB of regenerated runtime, browser profiles, caches and vendored ffmpeg. A 45 KB complete Sandbox trace plus SHA-256 manifest preserves the new G6 evidence. Proof dependencies are optional package metadata, tests run without writing caches, and START_UI disables Python bytecode generation.
+
+## G8 - Canonical technical paper and repository publication
+
+- Record conceptual provenance exactly: Kevin T. N. independently derived the architecture; Codex supplied technical implementation and documentation assistance.
+- Separate authored mechanisms, hidden substrate rules, acquired Fieldmap knowledge, and dynamic relational weights.
+- Report only repository evidence; prohibit unsupported accuracy, SOTA, general-intelligence, zero-prior, or autonomous-search-discovery claims.
+- Preserve a falsification table, limitations, reproducibility protocol, and evidence ledger.
+- Run the full test suite and boundary audit before publication.
+
+## G8 result - 2026-09-14
+
+PASS. The canonical English manuscript and architecture figure are packaged under docs/papers. Twelve tests passed in 33.11 seconds and the architecture-boundary audit returned PASS with zero violations. Publication is scoped to the current repository state.

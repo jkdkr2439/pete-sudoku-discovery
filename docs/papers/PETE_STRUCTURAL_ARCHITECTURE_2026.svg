@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Pete online structural induction architecture</title>
+  <desc id="desc">Academic architecture figure separating hidden substrate, body, Fieldmap, memory, Sandbox, controller, journal, and observer.</desc>
+  <defs>
+    <style>
+      .title{font:700 38px Georgia,serif;fill:#172033}.sub{font:italic 22px Georgia,serif;fill:#384258}.h{font:700 21px Georgia,serif;fill:#172033}.t{font:17px Georgia,serif;fill:#263248}.s{font:14px Arial,sans-serif;fill:#526077}.box{stroke-width:2;rx:16}.arrow{stroke:#25324a;stroke-width:2.5;fill:none;marker-end:url(#a)}.dash{stroke:#7b879a;stroke-width:2;stroke-dasharray:9 8;fill:none;rx:18}.tag{font:700 12px Arial,sans-serif;letter-spacing:1.4px}.foot{font:15px Georgia,serif;fill:#354158}
+    </style>
+    <marker id="a" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#25324a"/></marker>
+    <linearGradient id="g1" x1="0" x2="1"><stop stop-color="#eaf4ff"/><stop offset="1" stop-color="#dcecff"/></linearGradient>
+    <linearGradient id="g2" x1="0" x2="1"><stop stop-color="#eafff0"/><stop offset="1" stop-color="#dff7e5"/></linearGradient>
+    <linearGradient id="g3" x1="0" x2="1"><stop stop-color="#fff8df"/><stop offset="1" stop-color="#ffefc4"/></linearGradient>
+    <linearGradient id="g4" x1="0" x2="1"><stop stop-color="#f4ecff"/><stop offset="1" stop-color="#e7dcff"/></linearGradient>
+    <linearGradient id="g5" x1="0" x2="1"><stop stop-color="#fff0f2"/><stop offset="1" stop-color="#ffdfe5"/></linearGradient>
+  </defs>
+  <rect width="1600" height="1120" fill="#fff"/>
+  <text x="800" y="52" text-anchor="middle" class="title">Pete Structural Cognitive Architecture</text>
+  <text x="800" y="85" text-anchor="middle" class="sub">Observe → Induce → Imagine → Commit → Verify → Remember</text>
+  <text x="1510" y="32" text-anchor="end" class="s">Kevin T. N.</text><text x="1510" y="52" text-anchor="end" class="s">Vietnam · 2026</text>
+
+  <rect x="45" y="130" width="320" height="690" class="dash"/>
+  <text x="70" y="165" class="h">PHYSICAL WORLD</text>
+  <rect x="70" y="195" width="270" height="250" class="box" fill="url(#g5)" stroke="#e45d73"/>
+  <text x="92" y="230" class="tag" fill="#b63c52">HIDDEN-RULE SUBSTRATE</text>
+  <text x="92" y="270" class="h">Sudoku 9 × 9</text>
+  <text x="92" y="306" class="t">• hidden validity rules</text><text x="92" y="336" class="t">• board state and consequences</text><text x="92" y="366" class="t">• puzzle generation</text><text x="92" y="396" class="t">• terminal verification</text>
+  <rect x="70" y="485" width="270" height="210" class="box" fill="url(#g1)" stroke="#4487d5"/>
+  <text x="92" y="520" class="tag" fill="#316cac">CODE BODY</text>
+  <text x="92" y="560" class="t">Sensors: public state, gaps</text><text x="92" y="592" class="t">Actuators: probe, place</text><text x="92" y="624" class="t">Signal encoding</text><text x="92" y="656" class="t">No private rule access</text>
+  <rect x="70" y="730" width="270" height="62" class="box" fill="#f5f7fa" stroke="#8491a5"/><text x="205" y="768" text-anchor="middle" class="h">Physical action journal</text>
+
+  <rect x="420" y="130" width="750" height="690" class="dash"/>
+  <text x="445" y="165" class="h">COGNITIVE SYSTEM</text>
+  <rect x="450" y="195" width="330" height="205" class="box" fill="url(#g2)" stroke="#48a96a"/>
+  <text x="472" y="230" class="tag" fill="#31834d">FIELDMAP · DYNAMIC WEIGHTS</text>
+  <text x="472" y="270" class="t">candidate relations</text><text x="472" y="302" class="t">support / contradiction evidence</text><text x="472" y="334" class="t">online weight update</text><text x="472" y="366" class="t">constraint collapse</text>
+  <rect x="810" y="195" width="330" height="205" class="box" fill="url(#g1)" stroke="#4487d5"/>
+  <text x="832" y="230" class="tag" fill="#316cac">MEMORY</text>
+  <text x="832" y="270" class="t">working cognitive state</text><text x="832" y="302" class="t">structural relation memory</text><text x="832" y="334" class="t">episodic event journals</text><text x="832" y="366" class="t">proof artifacts + manifests</text>
+  <rect x="450" y="445" width="330" height="220" class="box" fill="url(#g4)" stroke="#8460c7"/>
+  <text x="472" y="480" class="tag" fill="#6844a8">SANDBOX · IMAGINATION</text>
+  <text x="472" y="520" class="t">copy public observation</text><text x="472" y="552" class="t">scan candidate actions</text><text x="472" y="584" class="t">try / erase / backtrack</text><text x="472" y="616" class="t">bounded completion proposal</text>
+  <rect x="810" y="445" width="330" height="220" class="box" fill="url(#g3)" stroke="#db9b24"/>
+  <text x="832" y="480" class="tag" fill="#a66d08">GOAL + D-IPOD CONTROLLER</text>
+  <text x="832" y="520" class="t">Input: bodily signal</text><text x="832" y="552" class="t">Process: induce / predict / search</text><text x="832" y="584" class="t">Output: intention / action</text><text x="832" y="616" class="t">Data + Display: persist / expose</text>
+  <rect x="630" y="710" width="330" height="72" class="box" fill="#f5f7fa" stroke="#8491a5"/><text x="795" y="742" text-anchor="middle" class="h">Decision boundary</text><text x="795" y="766" text-anchor="middle" class="s">counterfactual proposal → physical commitment</text>
+
+  <rect x="1225" y="130" width="330" height="690" class="dash"/>
+  <text x="1250" y="165" class="h">HUMAN AUDIT SURFACE</text>
+  <rect x="1250" y="195" width="280" height="250" class="box" fill="url(#g1)" stroke="#4487d5"/>
+  <text x="1272" y="230" class="tag" fill="#316cac">LIVE OBSERVER</text>
+  <text x="1272" y="270" class="t">current IPOD phase</text><text x="1272" y="302" class="t">partial board + active cell</text><text x="1272" y="334" class="t">Fieldmap state</text><text x="1272" y="366" class="t">Sandbox operation</text><text x="1272" y="398" class="t">source-linked code route</text>
+  <rect x="1250" y="485" width="280" height="210" class="box" fill="url(#g2)" stroke="#48a96a"/>
+  <text x="1272" y="520" class="tag" fill="#31834d">REPRODUCIBILITY</text>
+  <text x="1272" y="560" class="t">JSONL event traces</text><text x="1272" y="592" class="t">artifact hashes</text><text x="1272" y="624" class="t">boundary audit</text><text x="1272" y="656" class="t">automated tests</text>
+
+  <path d="M340 555 L450 555" class="arrow"/><text x="395" y="540" text-anchor="middle" class="s">signals</text>
+  <path d="M450 615 L340 615" class="arrow"/><text x="395" y="648" text-anchor="middle" class="s">actions</text>
+  <path d="M615 400 L615 445" class="arrow"/><path d="M780 295 L810 295" class="arrow"/>
+  <path d="M780 555 L810 555" class="arrow"/><path d="M975 400 L975 445" class="arrow"/>
+  <path d="M975 665 C975 700 930 710 890 710" class="arrow"/>
+  <path d="M700 710 C650 695 615 680 615 665" class="arrow"/>
+  <path d="M630 746 C500 746 390 690 340 650" class="arrow"/>
+  <path d="M1170 330 L1250 330" class="arrow"/><text x="1210" y="314" text-anchor="middle" class="s">state</text>
+  <path d="M1170 600 L1250 600" class="arrow"/><text x="1210" y="584" text-anchor="middle" class="s">trace</text>
+
+  <rect x="45" y="855" width="1510" height="205" rx="18" fill="#f8fafc" stroke="#a7b0bf" stroke-width="1.5"/>
+  <text x="70" y="892" class="h">EPISTEMIC BOUNDARY</text>
+  <text x="70" y="930" class="t">Authored priors: body interface · intervention schedule · evidence/collapse operator · bounded backtracking search</text>
+  <text x="70" y="966" class="t">Acquired online: relation evidence · dynamic Fieldmap weights · committed constraint structure · episode trace</text>
+  <text x="70" y="1002" class="t">Hidden from cognition: Sudoku validator · private candidates · stored solution · substrate internals</text>
+  <text x="70" y="1038" class="t">Absent: language model · neural checkpoint · offline task dataset · gradient optimization</text>
+  <text x="800" y="1093" text-anchor="middle" class="foot">Figure 1. Executable separation of physical rules, bodily access, online structural knowledge, counterfactual search, and audit evidence.</text>
+</svg>
