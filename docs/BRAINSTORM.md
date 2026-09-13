@@ -42,3 +42,9 @@ The observer Start action must activate an ongoing world loop, not one episode. 
 Sandbox names a bounded, reversible internal trial space. It is a component of Pete's broader capacity to imagine, not a synonym for all imagination. The substrate remains the authoritative world and therefore owns the dominant display area.
 
 Event names alone do not show what executes. The observer needs a phase-to-source route with the actual repository file, callable, line interval and source body. This view is read-only display data: it observes runtime selection but cannot feed source or hidden substrate state into cognition.
+
+## 2026-09-14 - G5: design is a measured collapse
+
+The current interface is correct but visually diffuse. The headline consumes too much first-screen space, the three architecture cards repeat prose without showing live process state, and the strongest visual contrast belongs to static typography rather than the running system. The authoritative board is correctly dominant; Sandbox is correctly smaller; Live Code Route is useful but appears as a detached card.
+
+Candidate collapse: turn the page into one coherent laboratory console. Use a compact identity header, a live phase rail, one large authoritative world panel and one instrument column containing Sandbox and current source. Preserve the warm paper palette while using dark navy only where source code and runtime focus require it.

@@ -88,3 +88,24 @@ PASS. One Start solved two consecutive 9x9 worlds in the live server, automatica
 ## G4 result - 2026-09-14
 
 PASS. Sandbox is now the concrete module and API name, its UI is subordinate to the substrate, and the observer exposes the real source route for scheduler, physical experiment, Fieldmap collapse, verification, Sandbox search, physical commit and world advance. Twelve tests pass, including a real 9x9 discovery/solve and a catalog-to-source assertion.
+
+## G5 - Pete design-engine UI refinement
+
+### Parent goal
+Make the observer surface readable as a scientific instrument: the user should immediately see the authoritative world, the small Sandbox, the current cognitive route and the evidence produced by the loop.
+
+### Fractal design loop
+1. Observe the rendered UI and record hierarchy, density and legibility gaps.
+2. Generate alternatives inside the design Sandbox.
+3. Collapse one layout using explicit metrics: first-glance hierarchy, phase visibility, source traceability, board legibility and viewport use.
+4. Render at 1600 x 1300, inspect the artifact and measure element bounds.
+5. Feed the remaining gap into the next loop.
+
+### Checkpoints
+- Loop 1: hierarchy and viewport economy.
+- Loop 2: phase/process observability and component identity.
+- Loop 3: spacing, contrast, responsive behavior and final visual QA.
+- Preserve architecture boundaries and runtime behavior.
+## G5 result - 2026-09-14
+
+PASS after three render loops. The observer now behaves as one laboratory console: compact runtime identity, live IPOD phase rail, dense evidence strip, dominant authoritative board, small Sandbox, adjacent real-source route, dynamic Fieldmap clauses and event journal. Desktop renders at 1600 x 1300 and 1280 x 900 preserve hierarchy and avoid horizontal overflow.

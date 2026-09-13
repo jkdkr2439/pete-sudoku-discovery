@@ -1,6 +1,6 @@
 {
   "schema": "pete.sudoku-discovery.checkpoint.v1",
-  "checkpoint": "G4-SANDBOX-LIVE-CODE",
+  "checkpoint": "G5-DESIGN-ENGINE-UI",
   "date": "2026-09-14",
   "status": "PASS",
   "claim": "A hidden 9x9 Sudoku substrate can ground an explicit dynamic Fieldmap through embodied interaction, and that Fieldmap can support counterfactual completion without a validator callback.",
@@ -131,5 +131,22 @@
     "live_code_route": "actual file, function, line interval and source for current phase",
     "route_count": 8,
     "mutation_authority": false
+  },
+  "design_ui": {
+    "loops": 3,
+    "viewports": [
+      "1600x1300",
+      "1280x900"
+    ],
+    "authoritative_board": "dominant",
+    "sandbox": "small and visually subordinate",
+    "phase_rail": "runtime-driven",
+    "live_code_route": "adjacent to world and Sandbox",
+    "horizontal_overflow": false,
+    "architecture_behavior_changed": false,
+    "log": "docs/DESIGN_LOOPS_G5.md",
+    "dom_contract": "PASS",
+    "javascript_syntax": "PASS",
+    "final_render": "runtime/ui-g5-final.png"
   }
 }

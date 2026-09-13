@@ -3,82 +3,126 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Pete - Sudoku World-Model Discovery</title>
+  <title>Pete — Sudoku Discovery Lab</title>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<header>
-  <div>
-    <p class="eyebrow">PETE / FALSIFIABLE WORLD-MODEL EXPERIMENT</p>
-    <h1>Knowledge must cross the world boundary.</h1>
-    <p class="lead">No corpus. No pretrained weights. No Sudoku rule inside cognition.</p>
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark"><span>P</span></div>
+    <div>
+      <p class="eyebrow">PETE / STRUCTURAL COGNITION LAB</p>
+      <h1>Sudoku Discovery</h1>
+      <p class="lead">An empty Fieldmap learns through physical consequence.</p>
+    </div>
+  </div>
+  <div class="runtime-strip">
+    <div class="runtime-stat"><span>WORLD</span><strong id="header-world">9 × 9</strong></div>
+    <div class="runtime-stat"><span>LEARNED</span><strong id="header-samples">0</strong></div>
+    <div class="runtime-stat"><span>SOLVED</span><strong id="header-solved">0</strong></div>
   </div>
   <div class="controls">
-    <button id="start">Start continuous</button>
-    <button id="pause" class="secondary">Pause</button>
-    <button id="next" class="secondary">Next world</button>
-    <span id="run-state" class="pill">IDLE</span>
+    <button id="start" type="button"><i></i>Start continuous</button>
+    <button id="pause" type="button" class="secondary">Pause</button>
+    <button id="next" type="button" class="secondary">Next world</button>
+    <span id="run-state" class="state-pill" aria-live="polite">IDLE</span>
   </div>
 </header>
 
 <main>
-  <section class="layers">
-    <article class="layer substrate"><span>01 / EXTERNAL</span><h2>Substrate</h2><p>Hidden constraints, irreversible consequences and authoritative grading.</p></article>
-    <div class="arrow">physical packets</div>
-    <article class="layer field"><span>02 / INTERNAL</span><h2>Dynamic Fieldmap</h2><p>Evidence changes relation weights. It begins empty.</p></article>
-    <div class="arrow">predictions only</div>
-    <article class="layer sandbox-layer"><span>03 / COUNTERFACTUAL</span><h2>Sandbox</h2><p>A small private workspace for reversible trials.</p></article>
+  <section class="phase-shell">
+    <div class="phase-intro">
+      <span class="section-tag">LIVE IPOD ROUTE</span>
+      <strong>World → structure → trial → action</strong>
+    </div>
+    <ol id="phase-rail" class="phase-rail">
+      <li class="phase-step" data-phase="PHYSICAL_EXPERIMENT"><span>01</span><div><b>Probe world</b><small>Body / Input</small></div></li>
+      <li class="phase-step" data-phase="FIELD_COLLAPSE"><span>02</span><div><b>Collapse</b><small>Fieldmap / Data</small></div></li>
+      <li class="phase-step" data-phase="HELD_OUT_VERIFICATION"><span>03</span><div><b>Verify</b><small>Process / Gap</small></div></li>
+      <li class="phase-step" data-phase="SANDBOX"><span>04</span><div><b>Sandbox</b><small>Reversible trial</small></div></li>
+      <li class="phase-step" data-phase="PHYSICAL_COMMIT"><span>05</span><div><b>Commit</b><small>Body / Output</small></div></li>
+      <li class="phase-step" data-phase="SOLVED"><span>06</span><div><b>New structure</b><small>World checkpoint</small></div></li>
+    </ol>
+  </section>
+
+  <section class="telemetry">
+    <div><span>PHYSICAL SAMPLES</span><strong id="samples">0</strong></div>
+    <div><span>FIELD ACCURACY</span><strong id="accuracy">—</strong></div>
+    <div><span>EMPTY BASELINE</span><strong id="baseline">—</strong></div>
+    <div><span>REACTION SHAPES</span><strong id="reactions">0</strong></div>
+    <div><span>HASHED EVENTS</span><strong id="journal">0</strong></div>
+    <div><span>STRUCTURE</span><strong id="structure">GENESIS</strong></div>
   </section>
 
   <section class="workspace">
-    <article class="panel board-panel substrate-panel">
-      <div class="panel-head"><div><span>AUTHORITATIVE STATE</span><h2 id="world-title">Opaque grid</h2></div><b id="difficulty"></b></div>
-      <div id="real-board" class="board"></div>
-      <p class="caption">The display can see the board. Cognition receives only the public sensor packet.</p>
+    <article class="instrument world-panel">
+      <div class="instrument-head">
+        <div>
+          <span class="section-tag coral">EXTERNAL / AUTHORITATIVE</span>
+          <h2 id="world-title">Opaque grid 9 × 9</h2>
+          <p>The substrate alone owns constraints, consequences and grading.</p>
+        </div>
+        <div class="world-meta">
+          <span id="difficulty">TIER 1</span>
+          <span id="action-count">0 ACTIONS</span>
+        </div>
+      </div>
+      <div class="world-body">
+        <div class="board-frame">
+          <div class="frame-corner tl"></div><div class="frame-corner tr"></div>
+          <div class="frame-corner bl"></div><div class="frame-corner br"></div>
+          <div id="real-board" class="board"></div>
+        </div>
+        <aside class="body-channel">
+          <span class="section-tag">BODY CHANNEL</span>
+          <div class="gauge"><div><small>LIFE</small><b id="life">—</b></div><i><em id="life-bar"></em></i></div>
+          <div class="gauge"><div><small>ENERGY</small><b id="energy">—</b></div><i><em id="energy-bar"></em></i></div>
+          <div class="boundary-note"><b>PUBLIC PACKET</b><span>board · fixed cells · action receipt</span></div>
+          <div class="boundary-note locked"><b>HIDDEN AUTHORITY</b><span>solution · constraint · reason</span></div>
+        </aside>
+      </div>
     </article>
 
-    <div class="side-stack">
-      <article class="panel board-panel sandbox-panel">
-        <div class="panel-head"><div><span>SMALL INTERNAL WORKSPACE</span><h2>Sandbox projection</h2></div><b id="attempts">-</b></div>
-        <div id="sandbox-board" class="board ghost"></div>
-        <p class="caption">Reversible trials use Fieldmap predictions. No substrate validator callback exists here.</p>
+    <div class="instrument-stack">
+      <article class="instrument sandbox-panel">
+        <div class="instrument-head compact">
+          <div><span class="section-tag violet">SMALL / REVERSIBLE</span><h2>Sandbox</h2></div>
+          <strong id="attempts">NO PROJECTION</strong>
+        </div>
+        <div class="sandbox-body">
+          <div id="sandbox-board" class="board ghost"></div>
+          <div class="sandbox-copy"><b>Fieldmap only</b><span>No substrate import<br>No validator callback</span></div>
+        </div>
       </article>
 
-      <article class="panel code-panel">
-        <div class="panel-head">
-          <div><span>EXECUTION OBSERVER</span><h2>Live Code Route</h2></div>
-          <b id="code-phase">IDLE</b>
+      <article class="instrument code-panel">
+        <div class="instrument-head compact dark-head">
+          <div><span class="section-tag blue">EXECUTION OBSERVER</span><h2>Live Code Route</h2></div>
+          <strong id="code-phase" aria-live="polite">IDLE</strong>
         </div>
         <div class="code-meta">
           <strong id="code-function">Waiting for runtime</strong>
-          <span id="code-file">-</span>
-          <span id="code-lines">-</span>
+          <span id="code-file">—</span>
+          <span id="code-lines">—</span>
         </div>
         <pre><code id="live-code">Loading source route...</code></pre>
-        <p class="caption">Read-only view of the actual function selected by the current runtime phase.</p>
       </article>
     </div>
   </section>
 
-  <section class="evidence">
-    <article class="panel metrics">
-      <div class="panel-head"><div><span>MEASUREMENT</span><h2>Proof signals</h2></div></div>
-      <div class="metric-grid">
-        <div><strong id="samples">0</strong><small>physical samples</small></div>
-        <div><strong id="accuracy">-</strong><small>held-out accuracy</small></div>
-        <div><strong id="baseline">-</strong><small>empty-model baseline</small></div>
-        <div><strong id="journal">0</strong><small>hashed events</small></div>
-        <div><strong id="worlds">0</strong><small>worlds solved</small></div>
-        <div><strong id="reactions">0</strong><small>reaction shapes</small></div>
-        <div><strong id="structure">GENESIS</strong><small>structure hash</small></div>
+  <section class="lower-grid">
+    <article class="instrument field-panel">
+      <div class="instrument-head compact">
+        <div><span class="section-tag mint">DYNAMIC WEIGHTS</span><h2>Collapsed relations</h2></div>
+        <strong id="clause-count">0 CLAUSES</strong>
       </div>
-    </article>
-    <article class="panel">
-      <div class="panel-head"><div><span>DYNAMIC WEIGHTS</span><h2>Collapsed relations</h2></div></div>
       <div id="clauses" class="clauses"><p class="muted">Fieldmap is empty.</p></div>
     </article>
-    <article class="panel events-panel">
-      <div class="panel-head"><div><span>PROCESS TRACE</span><h2>Live events</h2></div></div>
+    <article class="instrument events-panel">
+      <div class="instrument-head compact">
+        <div><span class="section-tag blue">PROCESS JOURNAL</span><h2>Live events</h2></div>
+        <span class="live-dot"><i></i>STREAM</span>
+      </div>
       <div id="events" class="events"></div>
     </article>
   </section>
