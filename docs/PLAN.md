@@ -51,3 +51,12 @@ All six checkpoints passed. The repository demonstrates an empty-to-predictive F
 ## G1 result - 2026-09-14
 
 PASS. All public entry points now create 9x9 worlds, alternate dimensions are rejected, the clean live run solved 9x9 from an empty Fieldmap, and all architecture gates passed.
+
+## G2 - Structural reaction memory and proof recording
+
+- Add pre-state, external input, structural mutation, gap signature and post-state to each Fieldmap assimilation.
+- Aggregate recurring reaction shapes and expose gap-based retrieval.
+- Display reaction counts, structure hash and retrieved resonance in the observer UI.
+- Add tests proving the gap belongs to the reaction rather than the raw input.
+- Reset all runtime evidence and record an end-to-end video from empty Fieldmap to authoritative 9x9 solution.
+- Include code-boundary and no-training evidence in the recording and checkpoint.

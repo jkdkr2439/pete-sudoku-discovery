@@ -5,4 +5,5 @@ __pycache__/
 runtime/
 build/
 dist/
-
+tools/_vendor/
+artifacts/proof/*.png

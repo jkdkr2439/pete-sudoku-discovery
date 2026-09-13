@@ -34,7 +34,9 @@ class DiscoveryAgent:
                 if not first["receipt"]["accepted"]:
                     raise RuntimeError("EMPTY_WORLD_REJECTED_FIRST_PROBE")
                 second = self.body.act(b, values[1], purpose="controlled-probe:second")
-                self.fieldmap.observe_pair((*a, values[0]), (*b, values[1]), size, second["receipt"]["accepted"])
+                accepted = second["receipt"]["accepted"]
+                self.fieldmap.retrieve_by_gap((*a, values[0]), (*b, values[1]), size, observed_conflict=not accepted)
+                self.fieldmap.observe_pair((*a, values[0]), (*b, values[1]), size, accepted)
                 completed += 1
                 if completed % max(1, total // 20) == 0:
                     self._emit("progress", phase=self.phase, completed=completed, total=total)
@@ -61,6 +63,7 @@ class DiscoveryAgent:
             self.body.act(a, values[0], purpose="heldout:first")
             result = self.body.act(b, values[1], purpose="heldout:second")
             actual_reject = not result["receipt"]["accepted"]
+            self.fieldmap.retrieve_by_gap((*a, values[0]), (*b, values[1]), size, observed_conflict=actual_reject)
             correct += predicted_reject == actual_reject
             baseline_correct += actual_reject is False
         report = {"cases": len(chosen), "accuracy": round(correct / max(1, len(chosen)), 6), "empty_model_baseline": round(baseline_correct / max(1, len(chosen)), 6)}

@@ -29,3 +29,7 @@ Use controlled two-token physical experiments. Describe each pair using a generi
 ## 2026-09-14 - G1: one world scale only
 
 The experiment is restricted to Sudoku 9x9. Smaller grids are removed so successful evidence cannot be attributed to a toy-scale curriculum. Difficulty changes only through clue removal and seeds; cognition and its empty-start condition remain unchanged.
+
+## 2026-09-14 - G2: data as structural reaction
+
+An external signal is not the stored data. The system transition it causes is the data: S(t) --input--> S(t+1). The gap is a measured component of that reaction, containing prediction mismatch and structural mutations. Retrieval therefore resonates against gap signatures and affected relations rather than fetching a raw input record. Identical reactions are aggregated to keep memory bounded.
