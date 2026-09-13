@@ -31,3 +31,10 @@ $env:PYTHONPATH = "src"
 python -m unittest discover -s tests -v
 python tools/audit_boundaries.py
 ```
+
+## Evidence artifacts
+
+- `docs/STRUCTURAL_REACTION_MEMORY.md`: formal dynamic-data definition.
+- `docs/VIDEO_PROOF_PROTOCOL.md`: clean-start recording protocol.
+- `artifacts/proof/PETE_9X9_EMPTY_TO_SOLVED_20260914.mp4`: recorded run.
+- `artifacts/proof/PETE_9X9_EMPTY_TO_SOLVED_20260914.manifest.json`: machine-readable provenance and timeline.

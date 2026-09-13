@@ -60,3 +60,7 @@ PASS. All public entry points now create 9x9 worlds, alternate dimensions are re
 - Add tests proving the gap belongs to the reaction rather than the raw input.
 - Reset all runtime evidence and record an end-to-end video from empty Fieldmap to authoritative 9x9 solution.
 - Include code-boundary and no-training evidence in the recording and checkpoint.
+
+## G2 result - 2026-09-14
+
+PASS. Fieldmap data is now stored as aggregated structural reactions with gap-indexed retrieval. Nine tests pass. A clean-start 44-frame MP4 records zero initial samples, clauses and journal events, followed by 6,480 physical reactions, three collapsed clauses, 100% held-out accuracy and an authoritative 9x9 SOLVED result.

@@ -1,0 +1,116 @@
+{
+  "schema": "pete.sudoku-discovery.video-proof.v1",
+  "source_commit": "5d9d35472f98c56aadf7224cffe09e30d87b373a",
+  "video": "artifacts\\proof\\PETE_9X9_EMPTY_TO_SOLVED_20260914.mp4",
+  "frame_rate": 2,
+  "frame_count": 44,
+  "initial": {
+    "shape": [
+      9,
+      9
+    ],
+    "fieldmap_samples": 0,
+    "fieldmap_clauses": 0,
+    "journal_events": 0,
+    "structure_hash": "a43f856a1ac105f9ac7fa0ba01edfa53875e3dd849b6527377f340e0d020d6d4"
+  },
+  "timeline": [
+    {
+      "phase": "PHYSICAL_EXPERIMENT",
+      "samples": 9,
+      "reaction_events": 9,
+      "reaction_shapes": 6,
+      "clauses": 0,
+      "structure_hash": "c84a3096818981a8242de96e8969a0800daacb247969591fcb77181f677b0491"
+    },
+    {
+      "phase": "PHYSICAL_EXPERIMENT",
+      "samples": 1525,
+      "reaction_events": 1525,
+      "reaction_shapes": 62,
+      "clauses": 0,
+      "structure_hash": "753795b1e0d816ccab534186fbc384ceb0f37189969aaed2cbdab31ba0c84c8a"
+    },
+    {
+      "phase": "PHYSICAL_EXPERIMENT",
+      "samples": 2587,
+      "reaction_events": 2587,
+      "reaction_shapes": 62,
+      "clauses": 0,
+      "structure_hash": "0ed6d5d27bad0a11b71be296b3f701a10c54fbce4dbbeb8f11859a8dc6e14b81"
+    },
+    {
+      "phase": "PHYSICAL_EXPERIMENT",
+      "samples": 5953,
+      "reaction_events": 5953,
+      "reaction_shapes": 81,
+      "clauses": 0,
+      "structure_hash": "107710553d5f8ecc18ef51790e23e0ad52c464327a3b89810294ea96828dd749"
+    },
+    {
+      "phase": "IMAGINATION",
+      "samples": 6480,
+      "reaction_events": 6480,
+      "reaction_shapes": 82,
+      "clauses": 3,
+      "structure_hash": "ecfd83ed97fe6241372dd90cd136a2afabfe44a1860ededee13a46ac12c2333a"
+    },
+    {
+      "phase": "SOLVED",
+      "samples": 6480,
+      "reaction_events": 6480,
+      "reaction_shapes": 82,
+      "clauses": 3,
+      "structure_hash": "ecfd83ed97fe6241372dd90cd136a2afabfe44a1860ededee13a46ac12c2333a"
+    }
+  ],
+  "final": {
+    "phase": "SOLVED",
+    "samples": 6480,
+    "clauses": [
+      {
+        "terms": [
+          "axis:1:eq",
+          "value:eq"
+        ],
+        "support": 324,
+        "counterevidence": 0,
+        "dynamic_weight": 1.0
+      },
+      {
+        "terms": [
+          "axis:0:eq",
+          "value:eq"
+        ],
+        "support": 324,
+        "counterevidence": 0,
+        "dynamic_weight": 1.0
+      },
+      {
+        "terms": [
+          "axis:0:bucket:3:eq",
+          "axis:1:bucket:3:eq",
+          "value:eq"
+        ],
+        "support": 324,
+        "counterevidence": 0,
+        "dynamic_weight": 1.0
+      }
+    ],
+    "reactions": {
+      "events": 6480,
+      "shapes": 82,
+      "structure_hash": "ecfd83ed97fe6241372dd90cd136a2afabfe44a1860ededee13a46ac12c2333a"
+    },
+    "verification": {
+      "cases": 240,
+      "accuracy": 1.0,
+      "empty_model_baseline": 0.925
+    },
+    "imagination_attempts": 31,
+    "journal": {
+      "events": 20191,
+      "head": "d8effde12961cb54b8f073fa08f2800ee49c23768350ab6bf6e7b4a6b4dbafb7"
+    }
+  }
+}

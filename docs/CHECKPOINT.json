@@ -1,6 +1,6 @@
 {
   "schema": "pete.sudoku-discovery.checkpoint.v1",
-  "checkpoint": "G1-9X9-ONLY",
+  "checkpoint": "G2-STRUCTURAL-REACTION-VIDEO",
   "date": "2026-09-14",
   "status": "PASS",
   "claim": "A hidden 9x9 Sudoku substrate can ground an explicit dynamic Fieldmap through embodied interaction, and that Fieldmap can support counterfactual completion without a validator callback.",
@@ -61,10 +61,42 @@
     "No offline training occurs, but online lifetime learning does occur."
   ],
   "verification": {
-    "unittest": "6 tests passed",
+    "unittest": "9 tests passed",
     "boundary_audit": "PASS",
     "javascript_syntax": "PASS",
     "python_compileall": "PASS",
-    "git_diff_check": "PASS"
+    "git_diff_check": "PASS",
+    "video_initial_state_guard": "PASS",
+    "video_final_authority": "SOLVED"
+  },
+  "dynamic_data": {
+    "stored_unit": "structural reaction",
+    "form": "S_before + input_reference + mutations + gap_signature + S_after",
+    "raw_pair_coordinates_retained_in_field_samples": false,
+    "retrieval_index": "gap signature and affected relation resonance",
+    "aggregation": "recurring reaction shapes are counted under one structure"
+  },
+  "video_proof": {
+    "source_commit": "5d9d35472f98c56aadf7224cffe09e30d87b373a",
+    "path": "artifacts/proof/PETE_9X9_EMPTY_TO_SOLVED_20260914.mp4",
+    "manifest": "artifacts/proof/PETE_9X9_EMPTY_TO_SOLVED_20260914.manifest.json",
+    "frames": 44,
+    "initial": {
+      "samples": 0,
+      "clauses": 0,
+      "journal_events": 0,
+      "reaction_events": 0
+    },
+    "final": {
+      "phase": "SOLVED",
+      "samples": 6480,
+      "clauses": 3,
+      "reaction_events": 6480,
+      "reaction_shapes": 82,
+      "accuracy": 1.0,
+      "baseline": 0.925,
+      "imagination_attempts": 31,
+      "journal_events": 20191
+    }
   }
 }
