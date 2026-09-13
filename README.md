@@ -21,9 +21,9 @@ python -m pete_discovery.server --port 8792
 
 Open http://127.0.0.1:8792/ and press **Start continuous**.
 
-## What "no training" means here
+## Learning boundary
 
-There is no offline optimization stage and no fixed learned parameter file. Pete still learns during its lifetime: embodied experiments alter explicit Fieldmap weights. Calling that process "no learning" would be false; the claim is **no prior task training and no encoded Sudoku knowledge in cognition**.
+Learning is mandatory: embodied experiments continuously alter explicit Fieldmap structure and weights. Knowledge is formed and updated during Pete's lifetime. The bounded claim is **no offline task optimization, no pretrained parameter file, and no encoded Sudoku knowledge in cognition**.
 
 ## Reproduce
 
@@ -31,6 +31,7 @@ There is no offline optimization stage and no fixed learned parameter file. Pete
 $env:PYTHONPATH = "src"
 python -m unittest discover -s tests -v
 python tools/audit_boundaries.py
+# Optional proof-video dependencies: pip install -e ".[proof]"
 ```
 
 ## Evidence artifacts
@@ -39,6 +40,8 @@ python tools/audit_boundaries.py
 - `docs/VIDEO_PROOF_PROTOCOL.md`: clean-start recording protocol.
 - `artifacts/proof/PETE_9X9_EMPTY_TO_SOLVED_20260914.mp4`: recorded run.
 - `artifacts/proof/PETE_9X9_EMPTY_TO_SOLVED_20260914.manifest.json`: machine-readable provenance and timeline.
+- `artifacts/proof/PETE_SANDBOX_TRACE_G6_20260914.jsonl`: one complete BEGIN-to-COMPLETE Sandbox trace.
+- `artifacts/proof/PETE_SANDBOX_TRACE_G6_20260914.manifest.json`: trace count, result and SHA-256.
 
 ## Continuous play
 

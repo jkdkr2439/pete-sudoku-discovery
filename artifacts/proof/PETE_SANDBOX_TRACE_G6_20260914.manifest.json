@@ -1,0 +1,15 @@
+{
+  "schema": "pete.sandbox-trace-proof.v1",
+  "date": "2026-09-14",
+  "world_id": "opaque-grid-9-14-2",
+  "records": 104,
+  "first_operation": "BEGIN",
+  "last_operation": "COMPLETE",
+  "attempts": 51,
+  "fieldmap_version": 1,
+  "authoritative_result": "SOLVED",
+  "sha256": "69d738b1234782480cda3bf0d6b3901d180d081508f6cbc941d4143d284df0db",
+  "trace": "artifacts/proof/PETE_SANDBOX_TRACE_G6_20260914.jsonl",
+  "source_commit": "17219bd",
+  "learning_boundary": "continuous online structural learning; no offline task optimization or preloaded Sudoku knowledge"
+}

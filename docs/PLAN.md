@@ -1,7 +1,7 @@
 # Plan
 
 ## Total goal G0
-Build a portable Sudoku discovery experiment that separates substrate, body, Fieldmap, sandbox, cognition, and display, then show measurable learning from interaction without training.
+Build a portable Sudoku discovery experiment that separates substrate, body, Fieldmap, sandbox, cognition, and display, then show measurable online structural learning without offline task optimization or preloaded Sudoku knowledge.
 
 ## Goal chain
 
@@ -59,7 +59,7 @@ PASS. All public entry points now create 9x9 worlds, alternate dimensions are re
 - Display reaction counts, structure hash and retrieved resonance in the observer UI.
 - Add tests proving the gap belongs to the reaction rather than the raw input.
 - Reset all runtime evidence and record an end-to-end video from empty Fieldmap to authoritative 9x9 solution.
-- Include code-boundary and no-training evidence in the recording and checkpoint.
+- Include code-boundary and learning-boundary evidence in the recording and checkpoint.
 
 ## G2 result - 2026-09-14
 
@@ -126,3 +126,13 @@ PASS after three render loops. The observer now behaves as one laboratory consol
 ## G6 result - 2026-09-14
 
 PASS. Sandbox now exposes BEGIN, SCAN, TRY, BACKTRACK and COMPLETE transformations with partial board snapshots, active cells, candidate sets, instructions and matching source focus. The observer server paces only the first 160 display steps; core tests run without delay. Every transformation is persisted to runtime/logs/sandbox-trace.jsonl. A live 9x9 run exposed 179 states and 76 tries before authoritative SOLVED.
+## G7 - Repository cleanup and portability
+
+- Pause continuous execution at a safe world boundary and stop the server before cleanup.
+- Preserve one complete G6 Sandbox trace with a SHA-256 manifest.
+- Remove runtime repetition, browser QA profiles, Python caches, pytest cache and locally vendored binaries.
+- Declare proof-video packages as optional project dependencies instead of storing an ignored 84 MB vendor tree.
+- Restart from the tracked launcher and verify the clean repository can regenerate runtime state.
+## G7 result - 2026-09-14
+
+PASS. Cleanup removed 269.5 MB of regenerated runtime, browser profiles, caches and vendored ffmpeg. A 45 KB complete Sandbox trace plus SHA-256 manifest preserves the new G6 evidence. Proof dependencies are optional package metadata, tests run without writing caches, and START_UI disables Python bytecode generation.

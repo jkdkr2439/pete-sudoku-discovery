@@ -5,12 +5,10 @@ import json
 from pathlib import Path
 import shutil
 import subprocess
-import sys
 import time
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "tools" / "_vendor"))
 
 import imageio_ffmpeg
 from PIL import Image, ImageDraw, ImageFont

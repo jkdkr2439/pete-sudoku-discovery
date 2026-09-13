@@ -1,6 +1,6 @@
 {
   "schema": "pete.sudoku-discovery.checkpoint.v1",
-  "checkpoint": "G6-OBSERVABLE-SANDBOX",
+  "checkpoint": "G7-CLEAN-PORTABLE",
   "date": "2026-09-14",
   "status": "PASS",
   "claim": "A hidden 9x9 Sudoku substrate can ground an explicit dynamic Fieldmap through embodied interaction, and that Fieldmap can support counterfactual completion without a validator callback.",
@@ -180,5 +180,22 @@
       "last_operation": "COMPLETE",
       "authoritative_result": "SOLVED"
     }
+  },
+  "cleanup": {
+    "removed_megabytes": 269.5,
+    "removed": [
+      "runtime repetition and browser profiles",
+      "tools/_vendor/imageio_ffmpeg",
+      "Python bytecode caches",
+      "pytest cache"
+    ],
+    "preserved_trace": "artifacts/proof/PETE_SANDBOX_TRACE_G6_20260914.jsonl",
+    "preserved_trace_records": 104,
+    "preserved_trace_bytes": 45542,
+    "preserved_trace_sha256": "69d738b1234782480cda3bf0d6b3901d180d081508f6cbc941d4143d284df0db",
+    "proof_dependencies": "optional project dependency group",
+    "bytecode_disabled_in_launcher": true,
+    "tests": "12 passed",
+    "boundary_audit": "PASS"
   }
 }
