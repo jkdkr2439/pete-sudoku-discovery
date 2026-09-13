@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from itertools import combinations
 
-from .imagination import Imagination
+from .sandbox import Sandbox
 
 
 class DiscoveryAgent:
@@ -11,11 +11,11 @@ class DiscoveryAgent:
     def __init__(self, body, fieldmap, event=None):
         self.body = body
         self.fieldmap = fieldmap
-        self.imagination = Imagination(fieldmap)
+        self.sandbox = Sandbox(fieldmap)
         self.event = event or (lambda kind, data: None)
         self.phase = "IDLE"
         self.metrics = {}
-        self.imagined = None
+        self.sandbox_state = None
 
     def _emit(self, kind, **data):
         self.event(kind, data)
@@ -72,27 +72,27 @@ class DiscoveryAgent:
         return report
 
     def solve_current(self):
-        self.phase = "IMAGINATION"
+        self.phase = "SANDBOX"
         packet = self.body.reset_challenge()
         public = packet["vision"]
-        imagined = self.imagination.complete(public)
-        self.imagined = imagined
-        self._emit("imagination", found=imagined["found"], attempts=imagined["attempts"])
-        if not imagined["found"]:
+        sandbox = self.sandbox.complete(public)
+        self.sandbox_state = sandbox
+        self._emit("sandbox", found=sandbox["found"], attempts=sandbox["attempts"])
+        if not sandbox["found"]:
             self.phase = "GAP_UNRESOLVED"
-            return {"status": self.phase, "imagination": imagined}
+            return {"status": self.phase, "sandbox": sandbox}
         self.phase = "PHYSICAL_COMMIT"
         last = None
         for y in range(public["shape"][0]):
             for x in range(public["shape"][1]):
                 if public["fixed"][y][x]:
                     continue
-                last = self.body.act((y, x), imagined["board"][y][x], purpose="challenge-commit")
+                last = self.body.act((y, x), sandbox["board"][y][x], purpose="challenge-commit")
                 if not last["receipt"]["accepted"]:
                     self.phase = "COUNTEREXAMPLE"
-                    self._emit("counterexample", position=[y, x], value=imagined["board"][y][x])
-                    return {"status": self.phase, "imagination": imagined, "receipt": last["receipt"]}
+                    self._emit("counterexample", position=[y, x], value=sandbox["board"][y][x])
+                    return {"status": self.phase, "sandbox": sandbox, "receipt": last["receipt"]}
         observation = self.body.sense()["vision"]
         self.phase = "SOLVED" if last and last["receipt"]["complete"] else "INCOMPLETE"
         self._emit("result", status=self.phase, actions=observation["action_index"])
-        return {"status": self.phase, "imagination": imagined, "observation": observation}
+        return {"status": self.phase, "sandbox": sandbox, "observation": observation}

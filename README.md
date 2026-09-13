@@ -2,13 +2,13 @@
 
 A standalone experiment testing one claim: **a rule-governed substrate can be the authoritative world from which an agent constructs a usable internal model through interaction.**
 
-The repository contains no LLM, pretrained weights, training corpus, or Sudoku rule in cognition. The substrate privately generates and enforces its world. Pete receives only board-shaped sensor packets and binary action consequences. Generic relational induction turns repeated gaps into a dynamic Fieldmap. Imagination then searches the Fieldmap without access to the real validator, and every proposed completion must survive physical commitment back into the substrate.
+The repository contains no LLM, pretrained weights, training corpus, or Sudoku rule in cognition. The substrate privately generates and enforces its world. Pete receives only board-shaped sensor packets and binary action consequences. Generic relational induction turns repeated gaps into a dynamic Fieldmap. Sandbox then searches the Fieldmap without access to the real validator, and every proposed completion must survive physical commitment back into the substrate.
 
 ## Three different things
 
 - **Substrate** is the external rule world: hidden constraints, state transitions, life consequences, puzzle generation and independent grading.
 - **Fieldmap** is Pete's dynamic internal model: evidence-weighted relation nodes collapsed from experience. It is analogous to changing weights, but remains explicit and inspectable.
-- **Imagination** is a sandboxed process: it uses the current Fieldmap to try possible states. It cannot ask the substrate whether an imagined move is correct.
+- **Sandbox** is a sandboxed process: it uses the current Fieldmap to try possible states. It cannot ask the substrate whether an Sandbox move is correct.
 
 ## Run
 

@@ -9,12 +9,12 @@ Demonstrate that a rule-governed substrate can serve as a world model from which
 - **Substrate:** authoritative external state, hidden constraints, consequences, puzzle generation, difficulty progression.
 - **Body:** finite sensor and actuator channels. It transports signals but does not interpret Sudoku.
 - **Fieldmap:** dynamic, evidence-bearing internal relations. These are the agent's changing weights.
-- **Imagination:** counterfactual workspace using only Fieldmap predictions; mistakes here do not touch substrate state.
+- **Sandbox:** counterfactual workspace using only Fieldmap predictions; mistakes here do not touch substrate state.
 - **Cognition:** generic experiment selection, relational description induction, goal selection, and collapse.
 - **Display:** observer-only evidence surface.
 
 ### Anti-cheating criterion
-Success is invalid if cognition imports the substrate, receives a hidden solution/rejection reason, contains named Sudoku constraints, or calls the real validator from imagination. A hidden substrate solver may exist solely to generate unique worlds and grade completion.
+Success is invalid if cognition imports the substrate, receives a hidden solution/rejection reason, contains named Sudoku constraints, or calls the real validator from sandbox. A hidden substrate solver may exist solely to generate unique worlds and grade completion.
 
 ### Learning mechanism
 Use controlled two-token physical experiments. Describe each pair using a generic relation vocabulary generated from observed integer coordinates and values: equality, inequality, and equal quotient buckets over possible scales. Accepted/rejected outcomes update Fieldmap weights. A greedy evidence cover may collapse recurring descriptors into a predictive constraint theory. This is generic relation induction; no descriptor is labeled as a Sudoku row, column, or block.
@@ -22,7 +22,7 @@ Use controlled two-token physical experiments. Describe each pair using a generi
 ### Falsifiable outputs
 1. Empty Fieldmap cannot predict hidden legality above chance.
 2. Physical probes change Fieldmap evidence and prediction accuracy.
-3. Imagination can find a completion using only the learned Fieldmap.
+3. Sandbox can find a completion using only the learned Fieldmap.
 4. The completion survives authoritative substrate commits.
 5. The same mechanism transfers across unseen 9x9 worlds and increasing clue-removal tiers without a cognition code change.
 
@@ -37,3 +37,8 @@ An external signal is not the stored data. The system transition it causes is th
 ## 2026-09-14 - G3: continuous world progression
 
 The observer Start action must activate an ongoing world loop, not one episode. After an authoritative SOLVED receipt, the substrate advances to the next 9x9 world while Fieldmap persists. The first seed ramps through three clue tiers; subsequent seeds provide unlimited hardest-tier worlds. Pause requests stop at a safe world boundary.
+## 2026-09-14 - G4: Sandbox is small; execution is inspectable
+
+Sandbox names a bounded, reversible internal trial space. It is a component of Pete's broader capacity to imagine, not a synonym for all imagination. The substrate remains the authoritative world and therefore owns the dominant display area.
+
+Event names alone do not show what executes. The observer needs a phase-to-source route with the actual repository file, callable, line interval and source body. This view is read-only display data: it observes runtime selection but cannot feed source or hidden substrate state into cognition.

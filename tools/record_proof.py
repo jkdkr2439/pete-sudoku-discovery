@@ -85,7 +85,7 @@ def main():
     frames.extend([card("HARD BOUNDARY", [
         "Sudoku constraints exist only inside the external substrate.",
         "Cognition cannot import substrate authority.",
-        "Imagination has no validator callback.",
+        "Sandbox has no validator callback.",
         "Every physical reaction is written to a hash-chained journal.",
     ], "#53b89d")] * 6)
 
@@ -150,7 +150,7 @@ def main():
                 "structure_hash": final["fieldmap"]["structure_hash"],
             },
             "verification": final["metrics"]["verification"],
-            "imagination_attempts": final["imagination"]["attempts"],
+            "sandbox_attempts": final["sandbox"]["attempts"],
             "journal": final["journal"],
         },
     }

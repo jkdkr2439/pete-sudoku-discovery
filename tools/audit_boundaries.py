@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 COGNITION_FILES = [
     ROOT / "src/pete_discovery/cognition.py",
     ROOT / "src/pete_discovery/fieldmap.py",
-    ROOT / "src/pete_discovery/imagination.py",
+    ROOT / "src/pete_discovery/sandbox.py",
 ]
 
 

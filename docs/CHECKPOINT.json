@@ -1,6 +1,6 @@
 {
   "schema": "pete.sudoku-discovery.checkpoint.v1",
-  "checkpoint": "G3-CONTINUOUS-9X9",
+  "checkpoint": "G4-SANDBOX-LIVE-CODE",
   "date": "2026-09-14",
   "status": "PASS",
   "claim": "A hidden 9x9 Sudoku substrate can ground an explicit dynamic Fieldmap through embodied interaction, and that Fieldmap can support counterfactual completion without a validator callback.",
@@ -22,8 +22,8 @@
     "external_dataset": false,
     "fixed_learned_weights": false,
     "sudoku_rules_in_cognition": false,
-    "substrate_import_in_cognition_or_imagination": false,
-    "hidden_solution_in_public_packet": false
+    "hidden_solution_in_public_packet": false,
+    "substrate_import_in_cognition_or_sandbox": false
   },
   "evidence": {
     "empty_start_to_solution": {
@@ -34,7 +34,7 @@
       "empty_model_baseline": 0.925,
       "fieldmap_accuracy": 1.0,
       "authoritative_result": "SOLVED",
-      "imagination_attempts": 51,
+      "sandbox_attempts": 51,
       "physical_actions": 13491,
       "elapsed_seconds": 14.621
     },
@@ -50,7 +50,7 @@
       "held_out_accuracy": 1.0,
       "empty_model_baseline": 0.925,
       "authoritative_result": "SOLVED",
-      "imagination_attempts": 31,
+      "sandbox_attempts": 31,
       "hash_journal_events": 20191,
       "error": null
     }
@@ -61,7 +61,7 @@
     "No offline training occurs, but online lifetime learning does occur."
   ],
   "verification": {
-    "unittest": "11 tests passed",
+    "unittest": "12 tests passed",
     "boundary_audit": "PASS",
     "javascript_syntax": "PASS",
     "python_compileall": "PASS",
@@ -97,7 +97,7 @@
       "reaction_shapes": 82,
       "accuracy": 1.0,
       "baseline": 0.925,
-      "imagination_attempts": 31,
+      "sandbox_attempts": 31,
       "journal_events": 20191
     }
   },
@@ -124,5 +124,12 @@
       "running_after_pause": false,
       "error": null
     }
+  },
+  "observer_ui": {
+    "dominant_world": "authoritative substrate board",
+    "small_workspace": "Sandbox projection",
+    "live_code_route": "actual file, function, line interval and source for current phase",
+    "route_count": 8,
+    "mutation_authority": false
   }
 }

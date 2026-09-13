@@ -1,18 +1,84 @@
 from __future__ import annotations
 
 import argparse
+import inspect
 import json
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from threading import Thread
 from urllib.parse import urlparse
 
+from .body import Body
+from .cognition import DiscoveryAgent
+from .fieldmap import DynamicFieldmap
 from .runtime import ExperimentRuntime
+from .sandbox import Sandbox
+
+
+CODE_TARGETS = {
+    "scheduler": ExperimentRuntime.run_continuous,
+    "physical_experiment": DiscoveryAgent.discover,
+    "field_collapse": DynamicFieldmap.collapse,
+    "verification": DiscoveryAgent.evaluate,
+    "sandbox": Sandbox.complete,
+    "physical_commit": Body.act,
+    "world_advance": ExperimentRuntime._advance_world,
+    "decision": DiscoveryAgent.solve_current,
+}
+
+PHASE_ROUTES = {
+    "IDLE": "scheduler",
+    "PHYSICAL_EXPERIMENT": "physical_experiment",
+    "FIELD_COLLAPSE": "field_collapse",
+    "HELD_OUT_VERIFICATION": "verification",
+    "SANDBOX": "sandbox",
+    "PHYSICAL_COMMIT": "physical_commit",
+    "SOLVED": "world_advance",
+    "INCOMPLETE": "decision",
+    "GAP_UNRESOLVED": "decision",
+    "COUNTEREXAMPLE": "decision",
+    "FAILED": "scheduler",
+}
+
+
+def code_catalog():
+    routes = {}
+    source_root = Path(__file__).resolve().parents[2]
+    for key, target in CODE_TARGETS.items():
+        lines, start_line = inspect.getsourcelines(target)
+        path = Path(inspect.getsourcefile(target) or "")
+        try:
+            display_path = path.resolve().relative_to(source_root).as_posix()
+        except ValueError:
+            display_path = path.name
+        routes[key] = {
+            "key": key,
+            "file": display_path,
+            "function": target.__qualname__,
+            "start_line": start_line,
+            "end_line": start_line + len(lines) - 1,
+            "source": "".join(lines),
+        }
+    return routes
+
+
+CODE_CATALOG = code_catalog()
 
 
 class App:
     def __init__(self, root):
         self.runtime = ExperimentRuntime(root)
+
+    def code_state(self):
+        phase = self.runtime.agent.phase
+        active_key = PHASE_ROUTES.get(phase, "decision")
+        return {
+            "phase": phase,
+            "active_key": active_key,
+            "active": CODE_CATALOG[active_key],
+            "routes": CODE_CATALOG,
+            "note": "Observer-only source display; it cannot mutate cognition, Fieldmap, Sandbox, or substrate.",
+        }
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -32,6 +98,9 @@ class Handler(BaseHTTPRequestHandler):
         path = urlparse(self.path).path
         if path == "/api/state":
             self._send(200, json.dumps(self.app.runtime.snapshot()), "application/json")
+            return
+        if path == "/api/code":
+            self._send(200, json.dumps(self.app.code_state()), "application/json")
             return
         name = "index.html" if path == "/" else path.lstrip("/")
         target = (self.static / name).resolve()

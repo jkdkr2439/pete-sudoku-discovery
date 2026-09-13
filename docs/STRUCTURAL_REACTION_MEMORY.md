@@ -48,7 +48,7 @@ The result is not a literal replay of an old input. It is reactivation of a prio
 
 - **Substrate:** produces the external consequence.
 - **Fieldmap:** is changed by that consequence and stores the reaction topology.
-- **Imagination:** operates on the resulting changed Fieldmap without touching substrate authority.
+- **Sandbox:** operates on the resulting changed Fieldmap without touching substrate authority.
 
 ## Present implementation boundary
 

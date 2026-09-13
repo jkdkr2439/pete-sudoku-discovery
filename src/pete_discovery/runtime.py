@@ -76,7 +76,7 @@ class ExperimentRuntime:
             "theory": theory,
             "verification": verification,
             "result": result["status"],
-            "imagination_attempts": (result.get("imagination") or {}).get("attempts"),
+            "sandbox_attempts": (result.get("sandbox") or {}).get("attempts"),
             "physical_actions": self.world.action_index,
             "life": self.body.life,
             "energy": self.body.energy,
@@ -93,7 +93,7 @@ class ExperimentRuntime:
                 "seed": world_identity["seed"],
                 "level": world_identity["level"],
                 "result": result["status"],
-                "imagination_attempts": receipt["imagination_attempts"],
+                "sandbox_attempts": receipt["sandbox_attempts"],
                 "fieldmap_version": self.fieldmap.version,
                 "journal_head": self.journal.previous,
             }
@@ -190,13 +190,13 @@ class ExperimentRuntime:
             "substrate": sensed["vision"],
             "body": sensed["interoception"],
             "fieldmap": self.fieldmap.snapshot(),
-            "imagination": self.agent.imagined,
+            "sandbox": self.agent.sandbox_state,
             "metrics": dict(self.agent.metrics),
             "journal": {"events": self.journal.sequence, "head": self.journal.previous},
             "events": events,
             "separation": {
                 "substrate": "authoritative hidden constraints and consequences",
-                "imagination": "counterfactual search over learned Fieldmap only",
+                "sandbox": "small counterfactual workspace over learned Fieldmap only",
                 "fieldmap": "dynamic evidence-weighted internal relations",
             },
         }

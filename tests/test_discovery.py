@@ -3,9 +3,10 @@ import json
 import unittest
 
 import pete_discovery.cognition as cognition_module
-import pete_discovery.imagination as imagination_module
+import pete_discovery.sandbox as sandbox_module
 from pete_discovery.runtime import ExperimentRuntime
 from pete_discovery.substrate import SudokuSubstrate
+from pete_discovery.server import code_catalog
 
 
 class ArchitectureBoundaryTests(unittest.TestCase):
@@ -16,13 +17,19 @@ class ArchitectureBoundaryTests(unittest.TestCase):
         for forbidden in ("solution", "candidate", "constraint", "group", "reason"):
             self.assertNotIn(forbidden, text)
 
-    def test_cognition_and_imagination_do_not_import_substrate(self):
-        source = inspect.getsource(cognition_module) + inspect.getsource(imagination_module)
+    def test_cognition_and_sandbox_do_not_import_substrate(self):
+        source = inspect.getsource(cognition_module) + inspect.getsource(sandbox_module)
         self.assertNotIn("import substrate", source)
         self.assertNotIn("from .substrate", source)
         self.assertNotIn("_valid(", source)
         self.assertNotIn("hidden_grade", source)
 
+    def test_live_code_catalog_points_to_real_runtime_functions(self):
+        routes = code_catalog()
+        self.assertIn("sandbox", routes)
+        self.assertTrue(routes["sandbox"]["file"].endswith("sandbox.py"))
+        self.assertIn("def complete", routes["sandbox"]["source"])
+        self.assertGreater(routes["sandbox"]["start_line"], 0)
     def test_every_other_dimension_is_rejected(self):
         for size in (1, 4, 16):
             with self.assertRaisesRegex(ValueError, "ONLY_9X9"):

@@ -1,7 +1,7 @@
 # Plan
 
 ## Total goal G0
-Build a portable Sudoku discovery experiment that separates substrate, body, Fieldmap, imagination, cognition, and display, then show measurable learning from interaction without training.
+Build a portable Sudoku discovery experiment that separates substrate, body, Fieldmap, sandbox, cognition, and display, then show measurable learning from interaction without training.
 
 ## Goal chain
 
@@ -20,14 +20,14 @@ Build a portable Sudoku discovery experiment that separates substrate, body, Fie
 - Collapse a compact predictive theory only after repeated support and counterexample checks.
 - Checkpoint: prediction accuracy improves from baseline on held-out interactions.
 
-### G0.4 — Imagination and action
+### G0.4 — Sandbox and action
 - Search counterfactual boards using only collapsed Fieldmap relations.
-- Commit the imagined completion through the body to the authoritative substrate.
-- Checkpoint: imagination has no substrate import/callback and the real world independently accepts every move.
+- Commit the Sandbox completion through the body to the authoritative substrate.
+- Checkpoint: sandbox has no substrate import/callback and the real world independently accepts every move.
 
 ### G0.5 — Progressive worlds and display
 - Generate unlimited deterministic puzzles across increasing clue-removal tiers.
-- Add Start/Pause/New controls and display the real board, Fieldmap weights, imagined board, journal, and proof metrics.
+- Add Start/Pause/New controls and display the real board, Fieldmap weights, Sandbox board, journal, and proof metrics.
 - Checkpoint: a clean run produces a machine-readable experiment receipt.
 
 ### G0.6 — Audit
@@ -38,7 +38,7 @@ Build a portable Sudoku discovery experiment that separates substrate, body, Fie
 
 ## G0 result - 2026-09-14
 
-All six checkpoints passed. The repository demonstrates an empty-to-predictive Fieldmap directly on 9x9 and transfer to harder unseen 9x9 puzzles without new samples. The boundary audit found no substrate authority import in cognition or imagination. See `docs/CHECKPOINT.json` for exact evidence and limitations.
+All six checkpoints passed. The repository demonstrates an empty-to-predictive Fieldmap directly on 9x9 and transfer to harder unseen 9x9 puzzles without new samples. The boundary audit found no substrate authority import in cognition or sandbox. See `docs/CHECKPOINT.json` for exact evidence and limitations.
 
 ## G1 - Restrict the experiment to 9x9
 
@@ -77,3 +77,14 @@ PASS. Fieldmap data is now stored as aggregated structural reactions with gap-in
 ## G3 result - 2026-09-14
 
 PASS. One Start solved two consecutive 9x9 worlds in the live server, automatically advanced the substrate, reused the same 6,480-sample three-clause Fieldmap without new samples, recorded both worlds, and honored Pause after the active world. Eleven tests pass.
+## G4 - Sandbox identity and live source observer
+
+- Rename the reversible counterfactual workspace from Imagination to Sandbox across code, API, tests and current documentation.
+- Keep the authoritative substrate board visually dominant and render Sandbox as a smaller internal workspace.
+- Add a read-only Live Code Route that resolves each runtime phase to the real file, function, line range and source text being executed.
+- Checkpoint: source display cannot mutate runtime state; Sandbox remains unable to import or call substrate authority.
+- Verify architecture tests, real 9x9 discovery/solve, boundary audit, Python compilation, JavaScript syntax and live HTTP endpoints.
+
+## G4 result - 2026-09-14
+
+PASS. Sandbox is now the concrete module and API name, its UI is subordinate to the substrate, and the observer exposes the real source route for scheduler, physical experiment, Fieldmap collapse, verification, Sandbox search, physical commit and world advance. Twelve tests pass, including a real 9x9 discovery/solve and a catalog-to-source assertion.

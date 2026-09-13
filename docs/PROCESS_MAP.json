@@ -7,7 +7,7 @@
     {"id":"body.act","I":["motor intention"],"P":"transduce and commit","O":["binary consequence","new observation"],"D":["hash-chained episode"]},
     {"id":"fieldmap.observe_gap","I":["binding pair","binary consequence"],"P":"update explicit evidence","O":["weighted relation evidence"],"D":["dynamic samples"]},
     {"id":"fieldmap.collapse","I":["weighted relation evidence"],"P":"select compact zero-counterexample cover","O":["predictive clauses"],"D":["Fieldmap version"]},
-    {"id":"imagination.search","I":["public puzzle","predictive clauses"],"P":"generic finite-domain counterfactual search","O":["intended complete state"],"D":["attempt count"]},
+    {"id":"sandbox.search","I":["public puzzle","predictive clauses"],"P":"generic finite-domain counterfactual search","O":["intended complete state"],"D":["attempt count"]},
     {"id":"body.commit","I":["intended state"],"P":"commit each difference through actuator","O":["physical receipts"],"D":["hash-chained episodes"]},
     {"id":"substrate.grade","I":["committed external state"],"P":"apply hidden authority","O":["complete or counterexample"],"D":["world progression"]}
   ]

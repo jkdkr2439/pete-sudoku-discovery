@@ -25,13 +25,13 @@ BODY -> SUBSTRATE (authoritative commitment)
 
 `fieldmap.py` starts empty. It receives pairs of opaque coordinate/value bindings plus accepted/rejected consequences. It generates a general arithmetic relation vocabulary from the public integers: equality and equal quotient buckets at possible scales. Evidence collapse selects the smallest zero-counterexample cover of rejected events. The resulting clauses have no Sudoku labels.
 
-`imagination.py` performs generic finite-domain state search. Compatibility comes exclusively from Fieldmap predictions. It imports no substrate module and receives no validator callback.
+`sandbox.py` performs generic finite-domain state search. Compatibility comes exclusively from Fieldmap predictions. It imports no substrate module and receives no validator callback.
 
-`cognition.py` chooses controlled two-binding experiments, requests Fieldmap collapse, verifies predictions on held-out values, asks imagination for a state, and commits that state through the body.
+`cognition.py` chooses controlled two-binding experiments, requests Fieldmap collapse, verifies predictions on held-out values, asks Sandbox for a state, and commits that state through the body.
 
 ## Why the substrate is a world model
 
-It is executable rather than descriptive. The same proposed action always meets authoritative state-transition conditions and produces a consequence. The agent can be wrong about it; therefore Fieldmap and substrate are not the same object. A learned theory becomes knowledge only after it predicts new substrate interactions and a complete imagined state survives real commitment.
+It is executable rather than descriptive. The same proposed action always meets authoritative state-transition conditions and produces a consequence. The agent can be wrong about it; therefore Fieldmap and substrate are not the same object. A learned theory becomes knowledge only after it predicts new substrate interactions and a complete sandbox state survives real commitment.
 
 ## Progressive worlds
 

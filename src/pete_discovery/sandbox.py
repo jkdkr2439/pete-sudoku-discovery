@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 
-class Imagination:
-    """Counterfactual search over public state using Fieldmap predictions only."""
+class Sandbox:
+    """Small counterfactual workspace using Fieldmap predictions only."""
 
     def __init__(self, fieldmap):
         self.fieldmap = fieldmap

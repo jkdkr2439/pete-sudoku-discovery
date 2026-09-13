@@ -15,7 +15,7 @@ class ScaleEvidenceTests(unittest.TestCase):
             self.assertEqual(verification["accuracy"], 1.0)
             result = runtime.agent.solve_current()
             self.assertEqual(result["status"], "SOLVED")
-            self.assertLess(result["imagination"]["attempts"], 5000)
+            self.assertLess(result["sandbox"]["attempts"], 5000)
 
 
 if __name__ == "__main__":
