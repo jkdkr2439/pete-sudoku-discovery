@@ -148,3 +148,54 @@ PASS. Cleanup removed 269.5 MB of regenerated runtime, browser profiles, caches 
 ## G8 result - 2026-09-14
 
 PASS. The canonical English manuscript and architecture figure are packaged under docs/papers. Twelve tests passed in 33.11 seconds and the architecture-boundary audit returned PASS with zero violations. Publication is scoped to the current repository state.
+
+## G9 — Scrambled-identity acquisition experiment
+
+1. Add an opaque-ID interface whose coordinate mapping and authority checks live only in substrate.py.
+2. Add a two-symbol-class pair table and a spatial-hypothesis control over the same public IDs.
+3. Implement exhaustive and adaptive grouped-probe acquisition with reset/placement accounting and a strict interaction budget.
+4. Adapt opaque public state to the existing Sandbox; enforce inclusive attempt limits and retain exhaustion status.
+5. Add a CLI benchmark with paired seeds/mappings, all outcomes retained, source/config hashes, physical journals, model snapshots, and authoritative completion receipts under runtime/.
+6. Test hidden-interface boundaries, recovery of synthetic pair constraints (including unequal-symbol conflicts), budget exhaustion, mapping invariance, and a real opaque 9x9 solve. Extend the audit to new cognitive modules.
+7. Run existing/new tests, boundary audit, and a fixed local pilot. Publish a local experiment document that reports costs and failures as observed. No commit or push is authorized.
+
+## G9 result — 2026-09-14
+
+Implemented and evaluated. All 23 tests and the expanded boundary audit pass. The fixed 18-case pilot retained every outcome and verified each physical journal. At 24,000 interactions both pair learners solve all three representations of seed 14; the spatial control solves only the identity mapping. At 8,000 interactions neither pair learner solves. Adaptive grouping reduces queries by about 32% but costs about 10% more total interactions on scrambled mappings, so efficiency superiority is not established. Full pair tables are identical across policies within each mapping. See `docs/OPAQUE_ACQUISITION.md` and `docs/OPAQUE_CHECKPOINT.json` for the bounded result and source-bound receipts. No commit or push performed.
+
+## G10 — Context reuse with cost-aware grouped probing
+
+1. Add `pair_cost_aware`, preserving the exhaustive and G9 adaptive policies as controls. Place the target first and stream learned-compatible group members, using each receipt as an exact pair label.
+2. Share reset/anchor cost, prioritize larger groups, and retain valid observations when an interaction budget interrupts a group. Guard against rejected actions that mutate state and anchors that cannot be placed.
+3. Add synthetic tests across equality/inequality conflict densities, budget boundaries, label renamings and dense worst cases; verify the complete-acquisition N+2Q accounting and exhaustive-cost upper bound.
+4. Before evaluating real worlds, fix the comparison matrix: new challenge seed 23; new opaque mapping seeds 41 and 53; budgets 12,000 and 24,000; arms pair_exhaustive, pair_adaptive and pair_cost_aware; search budget 2,000; tier 2. Retain all 12 cases and full source-bound receipts. Do not tune against this matrix after observing outcomes.
+5. Run the full tests and boundary audit. Record exact costs, model equivalence, physical completion and failures in a new G10 document/checkpoint. Preserve G9 artifacts and conclusions. No commit or push.
+
+## G10 result — 2026-09-14
+
+Implemented and evaluated. All 30 tests, the expanded boundary audit, JavaScript syntax and diff checks pass. All 12 fixed cases were retained. On new seed 23 with mappings 41 and 53, context reuse learns complete tables and solves using 9,056 and 8,684 interactions, reducing cost by 53.4% and 55.3% versus exhaustive probing. It alone solves at the 12,000 cap; all three policies solve at 24,000. Complete learned models and search traces are identical within each mapping. The result is bounded to the stated pairwise/symmetry/non-mutating-rejection assumptions and one new puzzle under two representations. See `docs/COST_AWARE_ACQUISITION.md` and `docs/COST_AWARE_CHECKPOINT.json`. No commit or push performed.
+
+## G11 — Bounded repair after hidden role swaps
+
+1. Add a substrate-only role-swap operation without exposing affected IDs or a change flag through Body.
+2. Add a revisable pair table with explicit old/new evidence history; preserve existing stationary learners.
+3. Add a budgeted recovery controller: retained-model attempt, contradiction probes and endpoint repair, then the unchanged Sandbox and physical commitment. Compare frozen reuse and fresh G10 relearning.
+4. Fix the local matrix before outcomes: warm acquisition on challenge seed 31, mapping seed 67, tier 2; hidden swap counts 0, 1 and 3 using seed 101; post-change budgets 6,000 and 12,000; frozen, relearn and repair arms; 2,000 search attempts per solve attempt; 128 compatible watchlist pairs with controller seed 0. Retain all 18 cases. Acquire the common warm model online once, snapshot it, and give each arm an independent copy of the same post-change state and warm model.
+5. Test added/removed conflict revisions, contradiction localization, budget preservation, failed commitment feedback, unchanged-world behavior and the hidden transition boundary. Run all tests and audit before the fixed matrix.
+6. Record post-change and lifetime costs, detection/repair status, residual model errors, source-bound receipts and journals. Distinguish successful local repair from universal change detection. No commit or push.
+
+## G11 result — 2026-09-14
+
+Implemented and evaluated. All 40 tests and the expanded audit pass. All 18 fixed cases were retained. After a common 9,004-interaction warm acquisition, repair solves both changed cases at a 6,000 cap while fresh relearning fails both. At 12,000, repair uses 4,487 versus 8,890 interactions after one swap and 7,466 versus 8,878 after three. All repaired models match all 6,480 authority checks, with 72 and 214 revisions respectively. At three swaps and the lower cap, recovery solves despite `REPAIR_BUDGET_STOP`; the finite watchlist did not finish, and full correctness is a subsequent evaluator finding. No-change controls trigger no extra work. See `docs/RULE_CHANGE_RECOVERY.md` and `docs/RULE_CHANGE_CHECKPOINT.json` for source-bound receipts and scope limits. No commit or push performed.
+
+## G12 — Archive retrieval across recurring rule networks
+
+1. Add an immutable, prediction-deduplicated archive of online learned pair models and a controller using public-given contradictions, disagreement probes (maximum 32), and 128 sampled verification probes. Require complete pair coverage for retrieval eligibility; retain provenance without claiming global validity.
+2. Reuse G11 repair and the unchanged Sandbox; enforce a shared per-phase budget for retrieval, verification, repair and commitment. Measure archive serialized bytes, selection CPU, selected-model errors after execution, and authoritative task outcomes.
+3. Add a sequential experiment CLI with one common warm A model, independent arms, and continuous per-arm models/journals. Fix the pilot before results: tier 2, puzzle seed 43, initial mapping 79, B swap seed 113 with severity 1 and 3, return to A by repeating the same swaps, C three swaps with seed 227, phase budget 12,000, search budget 2,000 per attempt, retrieval seed 0. Three arms (fresh, repair, memory), two severities, three post-warm phases = 18 phase receipts. Retain all outcomes without tuning to results.
+4. Test retrieval on recurrence, unfamiliar-model rejection and fallback, archive isolation/deduplication, budget exhaustion, evidence boundaries and finite-verification false reuse. Extend the static authority audit, then run full tests and audit before the pilot.
+5. Save source snapshots, hash-chained journals, model/archive snapshots, traces, phase/lifetime costs and a reproducible checkpoint under runtime/. Report task success separately from full pair-table correctness. No commit or push.
+
+## G12 result — 2026-09-14
+
+Implemented and evaluated. All 50 tests pass in 51.892 seconds, the seven-file boundary audit passes, and independent receipt verification passes for all six sequences/18 phases. All phases solve and all final models match 6,480 authority checks. Common online warm acquisition costs 8,784 interactions. Returning A costs 436 with memory versus 4,481/6,743 with current-model repair and 8,836 with fresh learning. Full lifetime costs are 21,503/23,762 with memory versus 25,230/29,751 with repair. Unfamiliar C rejects a plausible archive entry after 105 probes and costs 318 more than repair alone. Only two archive selections occur, both subsequently verified correct; candidate-disagreement probing is not needed in the real pilot. See `docs/MODEL_MEMORY.md` and `docs/MODEL_MEMORY_CHECKPOINT.json`. No commit or push performed.
