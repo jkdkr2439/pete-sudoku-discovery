@@ -1,0 +1,632 @@
+{
+  "base_commit": "b964715dc92fb200a19dc9a774affc6ff1e57152",
+  "cases": [
+    {
+      "budget": 6000,
+      "cost": {
+        "budget": 6000,
+        "interactions": 52,
+        "placements": 51,
+        "resets": 1
+      },
+      "lifetime_interactions": 9056,
+      "policy": "frozen",
+      "prediction": {
+        "cases": 6480,
+        "changed_pair_classes": 0,
+        "correct": 6480,
+        "mismatches": 0,
+        "residual_changed_pair_errors": 0,
+        "unknown_pair_classes": 0
+      },
+      "repair": {
+        "probes": 0,
+        "revalidated_pair_classes": 0,
+        "revisions": 0,
+        "triggers": 0,
+        "unverified_retained_pair_classes": null,
+        "watchlist_size": 0
+      },
+      "repair_status": "NOT_TRIGGERED",
+      "status": "SOLVED",
+      "swaps": 0
+    },
+    {
+      "budget": 6000,
+      "cost": {
+        "budget": 6000,
+        "interactions": 52,
+        "placements": 51,
+        "resets": 1
+      },
+      "lifetime_interactions": 9056,
+      "policy": "relearn",
+      "prediction": {
+        "cases": 6480,
+        "changed_pair_classes": 0,
+        "correct": 6480,
+        "mismatches": 0,
+        "residual_changed_pair_errors": 0,
+        "unknown_pair_classes": 0
+      },
+      "repair": {
+        "probes": 0,
+        "revalidated_pair_classes": 0,
+        "revisions": 0,
+        "triggers": 0,
+        "unverified_retained_pair_classes": null,
+        "watchlist_size": 0
+      },
+      "repair_status": "NOT_TRIGGERED",
+      "status": "SOLVED",
+      "swaps": 0
+    },
+    {
+      "budget": 6000,
+      "cost": {
+        "budget": 6000,
+        "interactions": 52,
+        "placements": 51,
+        "resets": 1
+      },
+      "lifetime_interactions": 9056,
+      "policy": "repair",
+      "prediction": {
+        "cases": 6480,
+        "changed_pair_classes": 0,
+        "correct": 6480,
+        "mismatches": 0,
+        "residual_changed_pair_errors": 0,
+        "unknown_pair_classes": 0
+      },
+      "repair": {
+        "probes": 0,
+        "revalidated_pair_classes": 0,
+        "revisions": 0,
+        "triggers": 0,
+        "unverified_retained_pair_classes": 6480,
+        "watchlist_size": 0
+      },
+      "repair_status": "NOT_TRIGGERED",
+      "status": "SOLVED",
+      "swaps": 0
+    },
+    {
+      "budget": 12000,
+      "cost": {
+        "budget": 12000,
+        "interactions": 52,
+        "placements": 51,
+        "resets": 1
+      },
+      "lifetime_interactions": 9056,
+      "policy": "frozen",
+      "prediction": {
+        "cases": 6480,
+        "changed_pair_classes": 0,
+        "correct": 6480,
+        "mismatches": 0,
+        "residual_changed_pair_errors": 0,
+        "unknown_pair_classes": 0
+      },
+      "repair": {
+        "probes": 0,
+        "revalidated_pair_classes": 0,
+        "revisions": 0,
+        "triggers": 0,
+        "unverified_retained_pair_classes": null,
+        "watchlist_size": 0
+      },
+      "repair_status": "NOT_TRIGGERED",
+      "status": "SOLVED",
+      "swaps": 0
+    },
+    {
+      "budget": 12000,
+      "cost": {
+        "budget": 12000,
+        "interactions": 52,
+        "placements": 51,
+        "resets": 1
+      },
+      "lifetime_interactions": 9056,
+      "policy": "relearn",
+      "prediction": {
+        "cases": 6480,
+        "changed_pair_classes": 0,
+        "correct": 6480,
+        "mismatches": 0,
+        "residual_changed_pair_errors": 0,
+        "unknown_pair_classes": 0
+      },
+      "repair": {
+        "probes": 0,
+        "revalidated_pair_classes": 0,
+        "revisions": 0,
+        "triggers": 0,
+        "unverified_retained_pair_classes": null,
+        "watchlist_size": 0
+      },
+      "repair_status": "NOT_TRIGGERED",
+      "status": "SOLVED",
+      "swaps": 0
+    },
+    {
+      "budget": 12000,
+      "cost": {
+        "budget": 12000,
+        "interactions": 52,
+        "placements": 51,
+        "resets": 1
+      },
+      "lifetime_interactions": 9056,
+      "policy": "repair",
+      "prediction": {
+        "cases": 6480,
+        "changed_pair_classes": 0,
+        "correct": 6480,
+        "mismatches": 0,
+        "residual_changed_pair_errors": 0,
+        "unknown_pair_classes": 0
+      },
+      "repair": {
+        "probes": 0,
+        "revalidated_pair_classes": 0,
+        "revisions": 0,
+        "triggers": 0,
+        "unverified_retained_pair_classes": 6480,
+        "watchlist_size": 0
+      },
+      "repair_status": "NOT_TRIGGERED",
+      "status": "SOLVED",
+      "swaps": 0
+    },
+    {
+      "budget": 6000,
+      "cost": {
+        "budget": 6000,
+        "interactions": 10,
+        "placements": 9,
+        "resets": 1
+      },
+      "lifetime_interactions": 9014,
+      "policy": "frozen",
+      "prediction": {
+        "cases": 6480,
+        "changed_pair_classes": 72,
+        "correct": 6408,
+        "mismatches": 72,
+        "residual_changed_pair_errors": 72,
+        "unknown_pair_classes": 0
+      },
+      "repair": {
+        "probes": 0,
+        "revalidated_pair_classes": 0,
+        "revisions": 0,
+        "triggers": 0,
+        "unverified_retained_pair_classes": null,
+        "watchlist_size": 0
+      },
+      "repair_status": "NOT_TRIGGERED",
+      "status": "COUNTEREXAMPLE",
+      "swaps": 1
+    },
+    {
+      "budget": 6000,
+      "cost": {
+        "budget": 6000,
+        "interactions": 5956,
+        "placements": 5108,
+        "resets": 848
+      },
+      "lifetime_interactions": 14960,
+      "policy": "relearn",
+      "prediction": {
+        "cases": 6480,
+        "changed_pair_classes": 72,
+        "correct": 6206,
+        "mismatches": 274,
+        "residual_changed_pair_errors": 22,
+        "unknown_pair_classes": 2234
+      },
+      "repair": {
+        "probes": 0,
+        "revalidated_pair_classes": 0,
+        "revisions": 0,
+        "triggers": 0,
+        "unverified_retained_pair_classes": null,
+        "watchlist_size": 0
+      },
+      "repair_status": "INTERACTION_BUDGET_STOP",
+      "status": "COUNTEREXAMPLE",
+      "swaps": 1
+    },
+    {
+      "budget": 6000,
+      "cost": {
+        "budget": 6000,
+        "interactions": 4487,
+        "placements": 3010,
+        "resets": 1477
+      },
+      "lifetime_interactions": 13491,
+      "policy": "repair",
+      "prediction": {
+        "cases": 6480,
+        "changed_pair_classes": 72,
+        "correct": 6480,
+        "mismatches": 0,
+        "residual_changed_pair_errors": 0,
+        "unknown_pair_classes": 0
+      },
+      "repair": {
+        "probes": 1475,
+        "revalidated_pair_classes": 1475,
+        "revisions": 72,
+        "triggers": 2,
+        "unverified_retained_pair_classes": 5005,
+        "watchlist_size": 974
+      },
+      "repair_status": "WATCHLIST_COMPLETE",
+      "status": "SOLVED",
+      "swaps": 1
+    },
+    {
+      "budget": 12000,
+      "cost": {
+        "budget": 12000,
+        "interactions": 10,
+        "placements": 9,
+        "resets": 1
+      },
+      "lifetime_interactions": 9014,
+      "policy": "frozen",
+      "prediction": {
+        "cases": 6480,
+        "changed_pair_classes": 72,
+        "correct": 6408,
+        "mismatches": 72,
+        "residual_changed_pair_errors": 72,
+        "unknown_pair_classes": 0
+      },
+      "repair": {
+        "probes": 0,
+        "revalidated_pair_classes": 0,
+        "revisions": 0,
+        "triggers": 0,
+        "unverified_retained_pair_classes": null,
+        "watchlist_size": 0
+      },
+      "repair_status": "NOT_TRIGGERED",
+      "status": "COUNTEREXAMPLE",
+      "swaps": 1
+    },
+    {
+      "budget": 12000,
+      "cost": {
+        "budget": 12000,
+        "interactions": 8890,
+        "placements": 7714,
+        "resets": 1176
+      },
+      "lifetime_interactions": 17894,
+      "policy": "relearn",
+      "prediction": {
+        "cases": 6480,
+        "changed_pair_classes": 72,
+        "correct": 6480,
+        "mismatches": 0,
+        "residual_changed_pair_errors": 0,
+        "unknown_pair_classes": 0
+      },
+      "repair": {
+        "probes": 0,
+        "revalidated_pair_classes": 0,
+        "revisions": 0,
+        "triggers": 0,
+        "unverified_retained_pair_classes": null,
+        "watchlist_size": 0
+      },
+      "repair_status": "COMPLETE",
+      "status": "SOLVED",
+      "swaps": 1
+    },
+    {
+      "budget": 12000,
+      "cost": {
+        "budget": 12000,
+        "interactions": 4487,
+        "placements": 3010,
+        "resets": 1477
+      },
+      "lifetime_interactions": 13491,
+      "policy": "repair",
+      "prediction": {
+        "cases": 6480,
+        "changed_pair_classes": 72,
+        "correct": 6480,
+        "mismatches": 0,
+        "residual_changed_pair_errors": 0,
+        "unknown_pair_classes": 0
+      },
+      "repair": {
+        "probes": 1475,
+        "revalidated_pair_classes": 1475,
+        "revisions": 72,
+        "triggers": 2,
+        "unverified_retained_pair_classes": 5005,
+        "watchlist_size": 974
+      },
+      "repair_status": "WATCHLIST_COMPLETE",
+      "status": "SOLVED",
+      "swaps": 1
+    },
+    {
+      "budget": 6000,
+      "cost": {
+        "budget": 6000,
+        "interactions": 10,
+        "placements": 9,
+        "resets": 1
+      },
+      "lifetime_interactions": 9014,
+      "policy": "frozen",
+      "prediction": {
+        "cases": 6480,
+        "changed_pair_classes": 214,
+        "correct": 6266,
+        "mismatches": 214,
+        "residual_changed_pair_errors": 214,
+        "unknown_pair_classes": 0
+      },
+      "repair": {
+        "probes": 0,
+        "revalidated_pair_classes": 0,
+        "revisions": 0,
+        "triggers": 0,
+        "unverified_retained_pair_classes": null,
+        "watchlist_size": 0
+      },
+      "repair_status": "NOT_TRIGGERED",
+      "status": "COUNTEREXAMPLE",
+      "swaps": 3
+    },
+    {
+      "budget": 6000,
+      "cost": {
+        "budget": 6000,
+        "interactions": 5958,
+        "placements": 5123,
+        "resets": 835
+      },
+      "lifetime_interactions": 14962,
+      "policy": "relearn",
+      "prediction": {
+        "cases": 6480,
+        "changed_pair_classes": 214,
+        "correct": 6207,
+        "mismatches": 273,
+        "residual_changed_pair_errors": 50,
+        "unknown_pair_classes": 2208
+      },
+      "repair": {
+        "probes": 0,
+        "revalidated_pair_classes": 0,
+        "revisions": 0,
+        "triggers": 0,
+        "unverified_retained_pair_classes": null,
+        "watchlist_size": 0
+      },
+      "repair_status": "INTERACTION_BUDGET_STOP",
+      "status": "COUNTEREXAMPLE",
+      "swaps": 3
+    },
+    {
+      "budget": 6000,
+      "cost": {
+        "budget": 6000,
+        "interactions": 5999,
+        "placements": 4018,
+        "resets": 1981
+      },
+      "lifetime_interactions": 15003,
+      "policy": "repair",
+      "prediction": {
+        "cases": 6480,
+        "changed_pair_classes": 214,
+        "correct": 6480,
+        "mismatches": 0,
+        "residual_changed_pair_errors": 0,
+        "unknown_pair_classes": 0
+      },
+      "repair": {
+        "probes": 1979,
+        "revalidated_pair_classes": 1979,
+        "revisions": 214,
+        "triggers": 6,
+        "unverified_retained_pair_classes": 4501,
+        "watchlist_size": 974
+      },
+      "repair_status": "REPAIR_BUDGET_STOP",
+      "status": "SOLVED",
+      "swaps": 3
+    },
+    {
+      "budget": 12000,
+      "cost": {
+        "budget": 12000,
+        "interactions": 10,
+        "placements": 9,
+        "resets": 1
+      },
+      "lifetime_interactions": 9014,
+      "policy": "frozen",
+      "prediction": {
+        "cases": 6480,
+        "changed_pair_classes": 214,
+        "correct": 6266,
+        "mismatches": 214,
+        "residual_changed_pair_errors": 214,
+        "unknown_pair_classes": 0
+      },
+      "repair": {
+        "probes": 0,
+        "revalidated_pair_classes": 0,
+        "revisions": 0,
+        "triggers": 0,
+        "unverified_retained_pair_classes": null,
+        "watchlist_size": 0
+      },
+      "repair_status": "NOT_TRIGGERED",
+      "status": "COUNTEREXAMPLE",
+      "swaps": 3
+    },
+    {
+      "budget": 12000,
+      "cost": {
+        "budget": 12000,
+        "interactions": 8878,
+        "placements": 7708,
+        "resets": 1170
+      },
+      "lifetime_interactions": 17882,
+      "policy": "relearn",
+      "prediction": {
+        "cases": 6480,
+        "changed_pair_classes": 214,
+        "correct": 6480,
+        "mismatches": 0,
+        "residual_changed_pair_errors": 0,
+        "unknown_pair_classes": 0
+      },
+      "repair": {
+        "probes": 0,
+        "revalidated_pair_classes": 0,
+        "revisions": 0,
+        "triggers": 0,
+        "unverified_retained_pair_classes": null,
+        "watchlist_size": 0
+      },
+      "repair_status": "COMPLETE",
+      "status": "SOLVED",
+      "swaps": 3
+    },
+    {
+      "budget": 12000,
+      "cost": {
+        "budget": 12000,
+        "interactions": 7466,
+        "placements": 4996,
+        "resets": 2470
+      },
+      "lifetime_interactions": 16470,
+      "policy": "repair",
+      "prediction": {
+        "cases": 6480,
+        "changed_pair_classes": 214,
+        "correct": 6480,
+        "mismatches": 0,
+        "residual_changed_pair_errors": 0,
+        "unknown_pair_classes": 0
+      },
+      "repair": {
+        "probes": 2468,
+        "revalidated_pair_classes": 2468,
+        "revisions": 214,
+        "triggers": 6,
+        "unverified_retained_pair_classes": 4012,
+        "watchlist_size": 974
+      },
+      "repair_status": "WATCHLIST_COMPLETE",
+      "status": "SOLVED",
+      "swaps": 3
+    }
+  ],
+  "checkpoint": "G11-HIDDEN-ROLE-RECOVERY",
+  "date": "2026-09-14",
+  "evidence": "runtime/recovery-g11-pilot/manifest.json",
+  "findings": [
+    "Repair solves both changed cases at the 6000 cap; fresh relearning solves neither.",
+    "At 12000, repair costs 4487 versus 8890 after one swap and 7466 versus 8878 after three swaps.",
+    "All repaired models have zero errors across 6480 pair/equality-class checks.",
+    "The three-swap 6000-cap case solves after a repair budget stop; its whole watchlist did not finish."
+  ],
+  "limitations": [
+    "One puzzle, one initial mapping, two related perturbation severities.",
+    "Finite, failure-triggered monitoring can miss changes not exercised by a successful solution.",
+    "Latest-label revision assumes noiseless feedback and stable rules during a repair phase.",
+    "No new constraint operators, higher-order domain, or multi-episode adaptation evaluated.",
+    "Changes remain local and uncommitted."
+  ],
+  "manifest_sha256": "df607cb429fff20c79fee23a0a8d0e7ecaf0b44de2ad6e330c12b6c855474764",
+  "source_sha256": {
+    "src/pete_discovery/__init__.py": "f957043805eecf47d377518fe15752d1509972f6870122421cab52b5ad25f067",
+    "src/pete_discovery/acquisition.py": "9d3713c96e5a3a2321e5a6690102b4e46b7b8cb0916baa3a9fbfba6d14621194",
+    "src/pete_discovery/body.py": "669ba92311a2f757902cf54f1e9488774b1b1e8b92f63ee23a5e2e4e1017a2f1",
+    "src/pete_discovery/cognition.py": "9c878d953c9cc04e5d9fcfd18cd3d82b0aee7213eb25fdb2f9b8f5e3b3e60279",
+    "src/pete_discovery/fieldmap.py": "cd8be58155d666584bd71c4727fec2119d73f652b0cb9a1e3fe99d94496e273d",
+    "src/pete_discovery/journal.py": "672149f7d58ed8a29599a4353661fd7fa2065cc1a93efae1635338436685a35a",
+    "src/pete_discovery/opaque_experiment.py": "1ec1bcda49f24c10d7ee6a452ddc57b4481065ac136a91c787461f4fdbdb883a",
+    "src/pete_discovery/pairmap.py": "9a5eb539655c36dd4ce06e2e9e16333c301104badb5f4f2d0fa367f0a9a31af3",
+    "src/pete_discovery/recovery.py": "f6d90a36c0d39c796542b644d0319fe76eba5f6fdc7d85947e17f6bc2e0bc033",
+    "src/pete_discovery/recovery_experiment.py": "577e32ca670c272409aae0ff479162a6f9b8337e99a80d119d20a4fb603e5408",
+    "src/pete_discovery/runtime.py": "ba277f0c32a5a9e11fdf9c8a30e0cfd05f46b6123ef1f21cf1858aa190481392",
+    "src/pete_discovery/sandbox.py": "b526228c5992206fd69ecece8867dd8d18307fc1f49ca6d19d0320e50a68b4a9",
+    "src/pete_discovery/server.py": "1de187e4213177e082db14ac6729df154d455b51f5f982066e22df2a889f792c",
+    "src/pete_discovery/substrate.py": "eb7c6676dd194f7b2a0504f7e5034741a97d817a2e5f5bf07592d97a9f0654a7"
+  },
+  "status": "IMPLEMENTED_AND_EVALUATED",
+  "validation": {
+    "artifacts": {
+      "boundary-audit.json": {
+        "sha256": "969f5399429a39c15ca234ff173cabccb62f4aef57d3abf52d2ed74e7fef3007"
+      },
+      "tests.log": {
+        "sha256": "07b91a5c9f4cdb05b9981521a4f3ba38ca5136654a3c676939160d2406b2fab8"
+      }
+    },
+    "boundary_audit": "PASS",
+    "javascript_syntax": "PASS",
+    "source_sha256": {
+      "tests/test_acquisition.py": "672ab460ba5b9846d56d8299cb0797d8ca003ed601a5ebffae484ce29df09fc8",
+      "tests/test_continuous.py": "bf44d0632cb66b7d7e75c4312b12f78c009a51e4266327f5c0d907f938dd8342",
+      "tests/test_cost_aware.py": "dfce5f0b595c68a6683b338442764d0af4f42a4413975bf11a69f4a7305ed326",
+      "tests/test_discovery.py": "ddfe915a261ab738f052abc3060d3b30b73e078abc5e1f43dde746b66e423b37",
+      "tests/test_recovery.py": "79b4a5ed15ba30ce07bd4ecdb1c03568d087e15bc6659513bc0f56f061848a31",
+      "tests/test_scale.py": "9992b16cc5c1795669e05a96163128077fd6fd916698586098681c6563d3f711",
+      "tests/test_structural_memory.py": "c8d5995c6f7da0bed000c32caf52e191023cae48e5d511d06885014ad77e1b16",
+      "tools/audit_boundaries.py": "319b5b266b79d5e1c00d1aed8bf5de3baa7d5de456281a12f8cab1c5219a0fd8"
+    },
+    "unit_tests": {
+      "passed": 40,
+      "seconds": 44.527
+    }
+  },
+  "warm": {
+    "journal": {
+      "events": 9005,
+      "head": "01b29bbd07aaeafd2b7db1c08f729eed19f5ff722de7742c2ae14b14b0dc9a46",
+      "verified": true
+    },
+    "learning": {
+      "interaction_budget": 24000,
+      "interactions": 9004,
+      "placements": 7742,
+      "policy": "cost_aware",
+      "queries": 1262,
+      "rejected_queries": 485,
+      "resets": 1262,
+      "status": "COMPLETE"
+    },
+    "model_sha256": "2901a9e53ce472cbb89a4d56623311973b04b57528adbeb5093a03af128f253e",
+    "prediction": {
+      "cases": 6480,
+      "changed_pair_classes": null,
+      "correct": 6480,
+      "mismatches": 0,
+      "residual_changed_pair_errors": null,
+      "unknown_pair_classes": 0
+    },
+    "seconds": 1.6447900519706309
+  }
+}

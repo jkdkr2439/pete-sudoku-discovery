@@ -35,7 +35,7 @@ class Body:
         public = receipt.public()
         self.journal.append("body.action", {
             "purpose": purpose,
-            "position": list(position),
+            "position": position if isinstance(position, str) else list(position),
             "value": value,
             "before_board": before["board"],
             "receipt": public,

@@ -1,0 +1,634 @@
+{
+  "base_commit": "b964715dc92fb200a19dc9a774affc6ff1e57152",
+  "cases": [
+    {
+      "lifetime_interactions": 35520,
+      "phases": [
+        {
+          "cost": {
+            "budget": 12000,
+            "interactions": 8856,
+            "placements": 7693,
+            "resets": 1163
+          },
+          "incorrect_reuse": null,
+          "phase": "B",
+          "prediction": {
+            "cases": 6480,
+            "changed_pair_classes": null,
+            "correct": 6480,
+            "mismatches": 0,
+            "residual_changed_pair_errors": null,
+            "unknown_pair_classes": 0
+          },
+          "selected_prediction": null,
+          "status": "SOLVED",
+          "total_model_storage_bytes": 521747
+        },
+        {
+          "cost": {
+            "budget": 12000,
+            "interactions": 8836,
+            "placements": 7683,
+            "resets": 1153
+          },
+          "incorrect_reuse": null,
+          "phase": "A_return",
+          "prediction": {
+            "cases": 6480,
+            "changed_pair_classes": null,
+            "correct": 6480,
+            "mismatches": 0,
+            "residual_changed_pair_errors": null,
+            "unknown_pair_classes": 0
+          },
+          "selected_prediction": null,
+          "status": "SOLVED",
+          "total_model_storage_bytes": 521747
+        },
+        {
+          "cost": {
+            "budget": 12000,
+            "interactions": 9044,
+            "placements": 7787,
+            "resets": 1257
+          },
+          "incorrect_reuse": null,
+          "phase": "C",
+          "prediction": {
+            "cases": 6480,
+            "changed_pair_classes": null,
+            "correct": 6480,
+            "mismatches": 0,
+            "residual_changed_pair_errors": null,
+            "unknown_pair_classes": 0
+          },
+          "selected_prediction": null,
+          "status": "SOLVED",
+          "total_model_storage_bytes": 521747
+        }
+      ],
+      "policy": "fresh",
+      "swaps": 1
+    },
+    {
+      "lifetime_interactions": 25230,
+      "phases": [
+        {
+          "cost": {
+            "budget": 12000,
+            "interactions": 4478,
+            "placements": 3001,
+            "resets": 1477
+          },
+          "incorrect_reuse": null,
+          "phase": "B",
+          "prediction": {
+            "cases": 6480,
+            "changed_pair_classes": null,
+            "correct": 6480,
+            "mismatches": 0,
+            "residual_changed_pair_errors": null,
+            "unknown_pair_classes": 0
+          },
+          "selected_prediction": null,
+          "status": "SOLVED",
+          "total_model_storage_bytes": 529906
+        },
+        {
+          "cost": {
+            "budget": 12000,
+            "interactions": 4481,
+            "placements": 3003,
+            "resets": 1478
+          },
+          "incorrect_reuse": null,
+          "phase": "A_return",
+          "prediction": {
+            "cases": 6480,
+            "changed_pair_classes": null,
+            "correct": 6480,
+            "mismatches": 0,
+            "residual_changed_pair_errors": null,
+            "unknown_pair_classes": 0
+          },
+          "selected_prediction": null,
+          "status": "SOLVED",
+          "total_model_storage_bytes": 538066
+        },
+        {
+          "cost": {
+            "budget": 12000,
+            "interactions": 7487,
+            "placements": 5019,
+            "resets": 2468
+          },
+          "incorrect_reuse": null,
+          "phase": "C",
+          "prediction": {
+            "cases": 6480,
+            "changed_pair_classes": null,
+            "correct": 6480,
+            "mismatches": 0,
+            "residual_changed_pair_errors": null,
+            "unknown_pair_classes": 0
+          },
+          "selected_prediction": null,
+          "status": "SOLVED",
+          "total_model_storage_bytes": 572208
+        }
+      ],
+      "policy": "repair",
+      "swaps": 1
+    },
+    {
+      "lifetime_interactions": 21503,
+      "phases": [
+        {
+          "archive_bytes": 1052078,
+          "archive_entries": 2,
+          "cost": {
+            "budget": 12000,
+            "interactions": 4478,
+            "placements": 3001,
+            "resets": 1477
+          },
+          "incorrect_reuse": null,
+          "phase": "B",
+          "prediction": {
+            "cases": 6480,
+            "changed_pair_classes": null,
+            "correct": 6480,
+            "mismatches": 0,
+            "residual_changed_pair_errors": null,
+            "unknown_pair_classes": 0
+          },
+          "retrieval": {
+            "cpu_seconds": 0.02445398000000054,
+            "discrimination_probes": 0,
+            "given_rejections": 1,
+            "initial_candidates": 1,
+            "interactions": 0,
+            "probes": 0,
+            "remaining_candidates": 0,
+            "seconds": 0.02445290598552674,
+            "selected_id": null,
+            "status": "NO_MATCH",
+            "universe_rejections": 0,
+            "verification_probes": 0
+          },
+          "selected_prediction": null,
+          "status": "SOLVED",
+          "total_model_storage_bytes": 1581984
+        },
+        {
+          "archive_bytes": 1052078,
+          "archive_entries": 2,
+          "cost": {
+            "budget": 12000,
+            "interactions": 436,
+            "placements": 307,
+            "resets": 129
+          },
+          "incorrect_reuse": false,
+          "phase": "A_return",
+          "prediction": {
+            "cases": 6480,
+            "changed_pair_classes": null,
+            "correct": 6480,
+            "mismatches": 0,
+            "residual_changed_pair_errors": null,
+            "unknown_pair_classes": 0
+          },
+          "retrieval": {
+            "cpu_seconds": 0.1585047710000005,
+            "discrimination_probes": 0,
+            "given_rejections": 1,
+            "initial_candidates": 2,
+            "interactions": 384,
+            "probes": 128,
+            "remaining_candidates": 1,
+            "seconds": 0.1584971590200439,
+            "selected_id": "2db78577f48e19986008e150f2c599ae00d457b9da927f90c26b8edfd7d43773",
+            "status": "TENTATIVE_MATCH",
+            "universe_rejections": 0,
+            "verification_probes": 128
+          },
+          "selected_prediction": {
+            "cases": 6480,
+            "changed_pair_classes": null,
+            "correct": 6480,
+            "mismatches": 0,
+            "residual_changed_pair_errors": null,
+            "unknown_pair_classes": 0
+          },
+          "status": "SOLVED",
+          "total_model_storage_bytes": 1573825
+        },
+        {
+          "archive_bytes": 1608017,
+          "archive_entries": 3,
+          "cost": {
+            "budget": 12000,
+            "interactions": 7805,
+            "placements": 5231,
+            "resets": 2574
+          },
+          "incorrect_reuse": null,
+          "phase": "C",
+          "prediction": {
+            "cases": 6480,
+            "changed_pair_classes": null,
+            "correct": 6480,
+            "mismatches": 0,
+            "residual_changed_pair_errors": null,
+            "unknown_pair_classes": 0
+          },
+          "retrieval": {
+            "cpu_seconds": 0.11825536999999997,
+            "discrimination_probes": 0,
+            "given_rejections": 1,
+            "initial_candidates": 2,
+            "interactions": 315,
+            "probes": 105,
+            "remaining_candidates": 0,
+            "seconds": 0.11825308302650228,
+            "selected_id": null,
+            "status": "NO_MATCH",
+            "universe_rejections": 0,
+            "verification_probes": 105
+          },
+          "selected_prediction": null,
+          "status": "SOLVED",
+          "total_model_storage_bytes": 2163763
+        }
+      ],
+      "policy": "memory",
+      "swaps": 1
+    },
+    {
+      "lifetime_interactions": 35528,
+      "phases": [
+        {
+          "cost": {
+            "budget": 12000,
+            "interactions": 8864,
+            "placements": 7697,
+            "resets": 1167
+          },
+          "incorrect_reuse": null,
+          "phase": "B",
+          "prediction": {
+            "cases": 6480,
+            "changed_pair_classes": null,
+            "correct": 6480,
+            "mismatches": 0,
+            "residual_changed_pair_errors": null,
+            "unknown_pair_classes": 0
+          },
+          "selected_prediction": null,
+          "status": "SOLVED",
+          "total_model_storage_bytes": 521747
+        },
+        {
+          "cost": {
+            "budget": 12000,
+            "interactions": 8836,
+            "placements": 7683,
+            "resets": 1153
+          },
+          "incorrect_reuse": null,
+          "phase": "A_return",
+          "prediction": {
+            "cases": 6480,
+            "changed_pair_classes": null,
+            "correct": 6480,
+            "mismatches": 0,
+            "residual_changed_pair_errors": null,
+            "unknown_pair_classes": 0
+          },
+          "selected_prediction": null,
+          "status": "SOLVED",
+          "total_model_storage_bytes": 521747
+        },
+        {
+          "cost": {
+            "budget": 12000,
+            "interactions": 9044,
+            "placements": 7787,
+            "resets": 1257
+          },
+          "incorrect_reuse": null,
+          "phase": "C",
+          "prediction": {
+            "cases": 6480,
+            "changed_pair_classes": null,
+            "correct": 6480,
+            "mismatches": 0,
+            "residual_changed_pair_errors": null,
+            "unknown_pair_classes": 0
+          },
+          "selected_prediction": null,
+          "status": "SOLVED",
+          "total_model_storage_bytes": 521747
+        }
+      ],
+      "policy": "fresh",
+      "swaps": 3
+    },
+    {
+      "lifetime_interactions": 29751,
+      "phases": [
+        {
+          "cost": {
+            "budget": 12000,
+            "interactions": 6737,
+            "placements": 4507,
+            "resets": 2230
+          },
+          "incorrect_reuse": null,
+          "phase": "B",
+          "prediction": {
+            "cases": 6480,
+            "changed_pair_classes": null,
+            "correct": 6480,
+            "mismatches": 0,
+            "residual_changed_pair_errors": null,
+            "unknown_pair_classes": 0
+          },
+          "selected_prediction": null,
+          "status": "SOLVED",
+          "total_model_storage_bytes": 543166
+        },
+        {
+          "cost": {
+            "budget": 12000,
+            "interactions": 6743,
+            "placements": 4511,
+            "resets": 2232
+          },
+          "incorrect_reuse": null,
+          "phase": "A_return",
+          "prediction": {
+            "cases": 6480,
+            "changed_pair_classes": null,
+            "correct": 6480,
+            "mismatches": 0,
+            "residual_changed_pair_errors": null,
+            "unknown_pair_classes": 0
+          },
+          "selected_prediction": null,
+          "status": "SOLVED",
+          "total_model_storage_bytes": 564597
+        },
+        {
+          "cost": {
+            "budget": 12000,
+            "interactions": 7487,
+            "placements": 5019,
+            "resets": 2468
+          },
+          "incorrect_reuse": null,
+          "phase": "C",
+          "prediction": {
+            "cases": 6480,
+            "changed_pair_classes": null,
+            "correct": 6480,
+            "mismatches": 0,
+            "residual_changed_pair_errors": null,
+            "unknown_pair_classes": 0
+          },
+          "selected_prediction": null,
+          "status": "SOLVED",
+          "total_model_storage_bytes": 598797
+        }
+      ],
+      "policy": "repair",
+      "swaps": 3
+    },
+    {
+      "lifetime_interactions": 23762,
+      "phases": [
+        {
+          "archive_bytes": 1065338,
+          "archive_entries": 2,
+          "cost": {
+            "budget": 12000,
+            "interactions": 6737,
+            "placements": 4507,
+            "resets": 2230
+          },
+          "incorrect_reuse": null,
+          "phase": "B",
+          "prediction": {
+            "cases": 6480,
+            "changed_pair_classes": null,
+            "correct": 6480,
+            "mismatches": 0,
+            "residual_changed_pair_errors": null,
+            "unknown_pair_classes": 0
+          },
+          "retrieval": {
+            "cpu_seconds": 0.03507272200000244,
+            "discrimination_probes": 0,
+            "given_rejections": 1,
+            "initial_candidates": 1,
+            "interactions": 0,
+            "probes": 0,
+            "remaining_candidates": 0,
+            "seconds": 0.03506596595980227,
+            "selected_id": null,
+            "status": "NO_MATCH",
+            "universe_rejections": 0,
+            "verification_probes": 0
+          },
+          "selected_prediction": null,
+          "status": "SOLVED",
+          "total_model_storage_bytes": 1608504
+        },
+        {
+          "archive_bytes": 1065338,
+          "archive_entries": 2,
+          "cost": {
+            "budget": 12000,
+            "interactions": 436,
+            "placements": 307,
+            "resets": 129
+          },
+          "incorrect_reuse": false,
+          "phase": "A_return",
+          "prediction": {
+            "cases": 6480,
+            "changed_pair_classes": null,
+            "correct": 6480,
+            "mismatches": 0,
+            "residual_changed_pair_errors": null,
+            "unknown_pair_classes": 0
+          },
+          "retrieval": {
+            "cpu_seconds": 0.14238673900000265,
+            "discrimination_probes": 0,
+            "given_rejections": 1,
+            "initial_candidates": 2,
+            "interactions": 384,
+            "probes": 128,
+            "remaining_candidates": 1,
+            "seconds": 0.14239267801167443,
+            "selected_id": "2db78577f48e19986008e150f2c599ae00d457b9da927f90c26b8edfd7d43773",
+            "status": "TENTATIVE_MATCH",
+            "universe_rejections": 0,
+            "verification_probes": 128
+          },
+          "selected_prediction": {
+            "cases": 6480,
+            "changed_pair_classes": null,
+            "correct": 6480,
+            "mismatches": 0,
+            "residual_changed_pair_errors": null,
+            "unknown_pair_classes": 0
+          },
+          "status": "SOLVED",
+          "total_model_storage_bytes": 1587085
+        },
+        {
+          "archive_bytes": 1621277,
+          "archive_entries": 3,
+          "cost": {
+            "budget": 12000,
+            "interactions": 7805,
+            "placements": 5231,
+            "resets": 2574
+          },
+          "incorrect_reuse": null,
+          "phase": "C",
+          "prediction": {
+            "cases": 6480,
+            "changed_pair_classes": null,
+            "correct": 6480,
+            "mismatches": 0,
+            "residual_changed_pair_errors": null,
+            "unknown_pair_classes": 0
+          },
+          "retrieval": {
+            "cpu_seconds": 0.10230725499999949,
+            "discrimination_probes": 0,
+            "given_rejections": 1,
+            "initial_candidates": 2,
+            "interactions": 315,
+            "probes": 105,
+            "remaining_candidates": 0,
+            "seconds": 0.10232493898365647,
+            "selected_id": null,
+            "status": "NO_MATCH",
+            "universe_rejections": 0,
+            "verification_probes": 105
+          },
+          "selected_prediction": null,
+          "status": "SOLVED",
+          "total_model_storage_bytes": 2177023
+        }
+      ],
+      "policy": "memory",
+      "swaps": 3
+    }
+  ],
+  "checkpoint": "G12-RULE-MODEL-MEMORY",
+  "date": "2026-09-14",
+  "evidence": "runtime/memory-g12-pilot/manifest.json",
+  "findings": [
+    "All 18 phases solved; all final models match 6480 authority checks.",
+    "Returning A costs 436 with memory, 4481/6743 with repair, and 8836 with fresh learning.",
+    "Lifetime memory cost falls 14.8/20.1 percent versus current-model repair.",
+    "Unfamiliar C costs 318 more interactions than repair after candidate rejection.",
+    "Both archive selections are correct; no candidate-disagreement probes needed in the real pilot."
+  ],
+  "limitations": [
+    "One puzzle and two related perturbation severities; A and C repeat across severities.",
+    "Sampled verification and task success cannot certify full rule validity.",
+    "Authored deterministic pairwise/symbol-symmetry model and retrieval policy.",
+    "Unbounded archive, no eviction or persistent loader, externally supplied task boundaries.",
+    "Local uncommitted changes; no commit or push."
+  ],
+  "manifest_sha256": "5134359a8bcf8fb6c4836f8d0c8079a643ea15bdec907c88491a7c1daba4a43c",
+  "source_sha256": {
+    "src/pete_discovery/__init__.py": "f957043805eecf47d377518fe15752d1509972f6870122421cab52b5ad25f067",
+    "src/pete_discovery/acquisition.py": "9d3713c96e5a3a2321e5a6690102b4e46b7b8cb0916baa3a9fbfba6d14621194",
+    "src/pete_discovery/body.py": "669ba92311a2f757902cf54f1e9488774b1b1e8b92f63ee23a5e2e4e1017a2f1",
+    "src/pete_discovery/cognition.py": "9c878d953c9cc04e5d9fcfd18cd3d82b0aee7213eb25fdb2f9b8f5e3b3e60279",
+    "src/pete_discovery/fieldmap.py": "cd8be58155d666584bd71c4727fec2119d73f652b0cb9a1e3fe99d94496e273d",
+    "src/pete_discovery/journal.py": "672149f7d58ed8a29599a4353661fd7fa2065cc1a93efae1635338436685a35a",
+    "src/pete_discovery/memory_experiment.py": "433adf45b907c0a87e8a7a503cb2d8d32b460c7fe2a2f12df4bef6aa869fd089",
+    "src/pete_discovery/model_memory.py": "5250cdc5dfc5c7add5055ec7c7de3322647d58932d0e6a364da64ec9225ec890",
+    "src/pete_discovery/opaque_experiment.py": "1ec1bcda49f24c10d7ee6a452ddc57b4481065ac136a91c787461f4fdbdb883a",
+    "src/pete_discovery/pairmap.py": "9a5eb539655c36dd4ce06e2e9e16333c301104badb5f4f2d0fa367f0a9a31af3",
+    "src/pete_discovery/recovery.py": "f6d90a36c0d39c796542b644d0319fe76eba5f6fdc7d85947e17f6bc2e0bc033",
+    "src/pete_discovery/recovery_experiment.py": "577e32ca670c272409aae0ff479162a6f9b8337e99a80d119d20a4fb603e5408",
+    "src/pete_discovery/runtime.py": "ba277f0c32a5a9e11fdf9c8a30e0cfd05f46b6123ef1f21cf1858aa190481392",
+    "src/pete_discovery/sandbox.py": "b526228c5992206fd69ecece8867dd8d18307fc1f49ca6d19d0320e50a68b4a9",
+    "src/pete_discovery/server.py": "1de187e4213177e082db14ac6729df154d455b51f5f982066e22df2a889f792c",
+    "src/pete_discovery/substrate.py": "eb7c6676dd194f7b2a0504f7e5034741a97d817a2e5f5bf07592d97a9f0654a7"
+  },
+  "status": "IMPLEMENTED_AND_EVALUATED",
+  "validation": {
+    "artifacts": {
+      "boundary-audit.json": {
+        "sha256": "7bf6e5cf064212131b8a54c901ed6c842b46bfdd2cb4d577ff547096b652ad41"
+      },
+      "pilot.log": {
+        "sha256": "3353230cc76dc5a270a4fff15b927cc23dcb198875a2c15d974be519259e4f12"
+      },
+      "receipt-audit.json": {
+        "sha256": "d66540a718cb1beab6d1d588920b4afbaaf53cbf0cee690e35519637c1d96bea"
+      },
+      "tests.log": {
+        "sha256": "152470f7bc1b17eff9a42cae8fa59308ea637c3eeb0cf234afe75f73239fbba8"
+      },
+      "verify_receipts.py": {
+        "sha256": "cf06a2980cd690896959e92983299d356169f1980688756d137f6966e4aa8f7d"
+      }
+    },
+    "boundary_audit": "PASS",
+    "receipt_audit": "PASS",
+    "source_sha256": {
+      "tests/test_acquisition.py": "4523941af3ab5cc4ac207c83bb709ed5bd72e019e1a4b8194a4140ee49ea29ab",
+      "tests/test_continuous.py": "bf44d0632cb66b7d7e75c4312b12f78c009a51e4266327f5c0d907f938dd8342",
+      "tests/test_cost_aware.py": "dfce5f0b595c68a6683b338442764d0af4f42a4413975bf11a69f4a7305ed326",
+      "tests/test_discovery.py": "ddfe915a261ab738f052abc3060d3b30b73e078abc5e1f43dde746b66e423b37",
+      "tests/test_model_memory.py": "e8343ec319d2115c4336b3a0dfe3363e9e14ddc8901b8efad51071061c0b0090",
+      "tests/test_recovery.py": "79b4a5ed15ba30ce07bd4ecdb1c03568d087e15bc6659513bc0f56f061848a31",
+      "tests/test_scale.py": "9992b16cc5c1795669e05a96163128077fd6fd916698586098681c6563d3f711",
+      "tests/test_structural_memory.py": "c8d5995c6f7da0bed000c32caf52e191023cae48e5d511d06885014ad77e1b16",
+      "tools/audit_boundaries.py": "10e8e8a12af7092dedaa6c903c872d8dba3910acedab2ffc623858cbcd052555"
+    },
+    "unit_tests": {
+      "passed": 50,
+      "seconds": 51.892
+    }
+  },
+  "warm": {
+    "journal": {
+      "events": 8785,
+      "head": "296378a8df5f775b50e174c2830d1aa24b7555c0287a229c583fc9c504b6e642",
+      "verified": true
+    },
+    "learning": {
+      "interaction_budget": 24000,
+      "interactions": 8784,
+      "placements": 7632,
+      "policy": "cost_aware",
+      "queries": 1152,
+      "rejected_queries": 457,
+      "resets": 1152,
+      "status": "COMPLETE"
+    },
+    "model_sha256": "9602d06ba7b9271018dd02fd79092a7b19f120f300e56b2e63f34a7b8a92a6a8",
+    "prediction": {
+      "cases": 6480,
+      "changed_pair_classes": null,
+      "correct": 6480,
+      "mismatches": 0,
+      "residual_changed_pair_errors": null,
+      "unknown_pair_classes": 0
+    }
+  }
+}

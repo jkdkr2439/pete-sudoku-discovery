@@ -187,3 +187,45 @@ class SudokuSubstrate:
     def hidden_grade(self, board: Board) -> bool:
         """Test/authority hook. Never exposed through a body port."""
         return board == self._solution and _valid(board)
+
+
+class OpaqueSudokuSubstrate(SudokuSubstrate):
+    """The experimental port exposes IDs; only authority knows their coordinates."""
+
+    def __init__(self, *, level=2, seed=1, scramble_seed=17):
+        super().__init__(level=level, seed=seed)
+        positions = [(y, x) for y in range(self.size) for x in range(self.size)]
+        if scramble_seed is not None:
+            Random(scramble_seed).shuffle(positions)
+        self.__positions = {f"cell-{i:03d}": pos for i, pos in enumerate(positions)}
+
+    def observe(self):
+        return {
+            "world_id": f"id-world-{self.seed}-{self.level}",
+            "cells": list(self.__positions),
+            "alphabet": list(range(1, self.size + 1)),
+            "board": {cell: self._board[y][x] for cell, (y, x) in self.__positions.items()},
+            "fixed": {cell: self._givens[y][x] for cell, (y, x) in self.__positions.items()},
+            "mode": self.mode,
+            "action_index": self.action_index,
+        }
+
+    def place(self, position, value):
+        return super().place(self.__positions.get(position, (-1, -1)), value)
+
+    def change_roles(self, *, swaps, seed):
+        """Authority-only transition; no change metadata enters the public port."""
+        if swaps < 0 or 2 * swaps > len(self.__positions):
+            raise ValueError("INVALID_ROLE_SWAP_COUNT")
+        chosen = Random(seed).sample(list(self.__positions), 2 * swaps)
+        for a, b in zip(chosen[::2], chosen[1::2]):
+            self.__positions[a], self.__positions[b] = self.__positions[b], self.__positions[a]
+        self.reset_challenge()
+
+    def hidden_pair_conflict(self, a, av, b, bv):
+        """Read-only evaluator hook. Never passed to a body or learner."""
+        work = [[0] * self.size for _ in range(self.size)]
+        for cell, value in ((a, av), (b, bv)):
+            y, x = self.__positions[cell]
+            work[y][x] = value
+        return not _valid(tuple(tuple(row) for row in work))

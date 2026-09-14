@@ -46,3 +46,24 @@ python tools/audit_boundaries.py
 ## Continuous play
 
 One Start keeps the scheduler active. After each authoritative SOLVED receipt, the substrate creates the next 9x9 puzzle and Fieldmap is retained. Three clue tiers are followed by unlimited hardest-tier worlds across new seeds. Pause stops after the current world reaches a safe boundary.
+
+## Scrambled-identity acquisition experiment
+
+A separate CLI compares the original spatial hypotheses with exhaustive and adaptive
+pairwise learners behind a substrate-owned cell permutation. All arms use the same
+Sandbox search. The pairwise learners assume pairwise constraints and symbol-renaming
+symmetry, but receive no physical coordinates. See
+[`docs/OPAQUE_ACQUISITION.md`](docs/OPAQUE_ACQUISITION.md) for assumptions, budgets,
+reproduction commands and measured results.
+
+The follow-up [`docs/COST_AWARE_ACQUISITION.md`](docs/COST_AWARE_ACQUISITION.md)
+adds `pair_cost_aware`, which reuses compatible contexts and learns from each
+placement receipt. It compares actual reset-plus-placement cost with the G9 controls.
+
+[`docs/RULE_CHANGE_RECOVERY.md`](docs/RULE_CHANGE_RECOVERY.md) tests failure-triggered
+repair after hidden cell-role changes, comparing retained-model reuse, fresh
+relearning and targeted revision with full post-transition cost accounting.
+
+[`docs/MODEL_MEMORY.md`](docs/MODEL_MEMORY.md) adds an archive of online-learned rule
+models and tests A → B → A → C recurrence against fresh learning and current-model
+repair, including retrieval costs, unfamiliar-world fallback and storage.

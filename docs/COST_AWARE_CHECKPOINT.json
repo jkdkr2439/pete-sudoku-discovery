@@ -1,0 +1,205 @@
+{
+  "base_commit": "b964715dc92fb200a19dc9a774affc6ff1e57152",
+  "cases": [
+    {
+      "arm": "pair_exhaustive",
+      "interaction_budget": 12000,
+      "interactions": 12000,
+      "known_pair_classes": 4000,
+      "learning_status": "INTERACTION_BUDGET_STOP",
+      "placements": 8000,
+      "queries": 4000,
+      "scramble_seed": 41,
+      "search_attempts": 51,
+      "status": "COUNTEREXAMPLE"
+    },
+    {
+      "arm": "pair_adaptive",
+      "interaction_budget": 12000,
+      "interactions": 11998,
+      "known_pair_classes": 3800,
+      "learning_status": "INTERACTION_BUDGET_STOP",
+      "placements": 9404,
+      "queries": 2594,
+      "scramble_seed": 41,
+      "search_attempts": 51,
+      "status": "COUNTEREXAMPLE"
+    },
+    {
+      "arm": "pair_cost_aware",
+      "interaction_budget": 12000,
+      "interactions": 9056,
+      "known_pair_classes": 6480,
+      "learning_status": "COMPLETE",
+      "placements": 7768,
+      "queries": 1288,
+      "scramble_seed": 41,
+      "search_attempts": 81,
+      "status": "SOLVED"
+    },
+    {
+      "arm": "pair_exhaustive",
+      "interaction_budget": 24000,
+      "interactions": 19440,
+      "known_pair_classes": 6480,
+      "learning_status": "COMPLETE",
+      "placements": 12960,
+      "queries": 6480,
+      "scramble_seed": 41,
+      "search_attempts": 81,
+      "status": "SOLVED"
+    },
+    {
+      "arm": "pair_adaptive",
+      "interaction_budget": 24000,
+      "interactions": 21046,
+      "known_pair_classes": 6480,
+      "learning_status": "COMPLETE",
+      "placements": 16630,
+      "queries": 4416,
+      "scramble_seed": 41,
+      "search_attempts": 81,
+      "status": "SOLVED"
+    },
+    {
+      "arm": "pair_cost_aware",
+      "interaction_budget": 24000,
+      "interactions": 9056,
+      "known_pair_classes": 6480,
+      "learning_status": "COMPLETE",
+      "placements": 7768,
+      "queries": 1288,
+      "scramble_seed": 41,
+      "search_attempts": 81,
+      "status": "SOLVED"
+    },
+    {
+      "arm": "pair_exhaustive",
+      "interaction_budget": 12000,
+      "interactions": 12000,
+      "known_pair_classes": 4000,
+      "learning_status": "INTERACTION_BUDGET_STOP",
+      "placements": 8000,
+      "queries": 4000,
+      "scramble_seed": 53,
+      "search_attempts": 51,
+      "status": "COUNTEREXAMPLE"
+    },
+    {
+      "arm": "pair_adaptive",
+      "interaction_budget": 12000,
+      "interactions": 11992,
+      "known_pair_classes": 3719,
+      "learning_status": "INTERACTION_BUDGET_STOP",
+      "placements": 9497,
+      "queries": 2495,
+      "scramble_seed": 53,
+      "search_attempts": 51,
+      "status": "COUNTEREXAMPLE"
+    },
+    {
+      "arm": "pair_cost_aware",
+      "interaction_budget": 12000,
+      "interactions": 8684,
+      "known_pair_classes": 6480,
+      "learning_status": "COMPLETE",
+      "placements": 7582,
+      "queries": 1102,
+      "scramble_seed": 53,
+      "search_attempts": 51,
+      "status": "SOLVED"
+    },
+    {
+      "arm": "pair_exhaustive",
+      "interaction_budget": 24000,
+      "interactions": 19440,
+      "known_pair_classes": 6480,
+      "learning_status": "COMPLETE",
+      "placements": 12960,
+      "queries": 6480,
+      "scramble_seed": 53,
+      "search_attempts": 51,
+      "status": "SOLVED"
+    },
+    {
+      "arm": "pair_adaptive",
+      "interaction_budget": 24000,
+      "interactions": 21444,
+      "known_pair_classes": 6480,
+      "learning_status": "COMPLETE",
+      "placements": 17088,
+      "queries": 4356,
+      "scramble_seed": 53,
+      "search_attempts": 51,
+      "status": "SOLVED"
+    },
+    {
+      "arm": "pair_cost_aware",
+      "interaction_budget": 24000,
+      "interactions": 8684,
+      "known_pair_classes": 6480,
+      "learning_status": "COMPLETE",
+      "placements": 7582,
+      "queries": 1102,
+      "scramble_seed": 53,
+      "search_attempts": 51,
+      "status": "SOLVED"
+    }
+  ],
+  "checkpoint": "G10-CONTEXT-REUSE",
+  "date": "2026-09-14",
+  "evidence": "runtime/opaque-g10-pilot/manifest.json",
+  "findings": [
+    "Context reuse saves 53.4 and 55.3 percent of interactions relative to exhaustive acquisition on the two mappings.",
+    "Only context reuse solves under the 12000 interaction cap; all policies solve at 24000.",
+    "Complete model files and search traces are identical within each mapping across policies."
+  ],
+  "limitations": [
+    "One generated puzzle across two mappings.",
+    "Pairwise constraints, symbol symmetry and non-mutating rejections are authored interface assumptions.",
+    "No task transfer, rule-change adaptation, or learned experiment-selection policy evaluated.",
+    "Local changes remain uncommitted."
+  ],
+  "manifest_sha256": "5e5f178ec43d4d4724398815c0d7c7ab8d42845a81a5bc8ff2beaa0c4568951f",
+  "source_sha256": {
+    "src/pete_discovery/__init__.py": "f957043805eecf47d377518fe15752d1509972f6870122421cab52b5ad25f067",
+    "src/pete_discovery/acquisition.py": "9d3713c96e5a3a2321e5a6690102b4e46b7b8cb0916baa3a9fbfba6d14621194",
+    "src/pete_discovery/body.py": "669ba92311a2f757902cf54f1e9488774b1b1e8b92f63ee23a5e2e4e1017a2f1",
+    "src/pete_discovery/cognition.py": "9c878d953c9cc04e5d9fcfd18cd3d82b0aee7213eb25fdb2f9b8f5e3b3e60279",
+    "src/pete_discovery/fieldmap.py": "cd8be58155d666584bd71c4727fec2119d73f652b0cb9a1e3fe99d94496e273d",
+    "src/pete_discovery/journal.py": "672149f7d58ed8a29599a4353661fd7fa2065cc1a93efae1635338436685a35a",
+    "src/pete_discovery/opaque_experiment.py": "1ec1bcda49f24c10d7ee6a452ddc57b4481065ac136a91c787461f4fdbdb883a",
+    "src/pete_discovery/pairmap.py": "9fdc0da69d1bb24ba82f2214facebae3289b032a27b4874a17e985bee44b0fc9",
+    "src/pete_discovery/runtime.py": "ba277f0c32a5a9e11fdf9c8a30e0cfd05f46b6123ef1f21cf1858aa190481392",
+    "src/pete_discovery/sandbox.py": "b526228c5992206fd69ecece8867dd8d18307fc1f49ca6d19d0320e50a68b4a9",
+    "src/pete_discovery/server.py": "1de187e4213177e082db14ac6729df154d455b51f5f982066e22df2a889f792c",
+    "src/pete_discovery/substrate.py": "8db1df5cc2a08da85a6cc6a30cbeeab3ab7a1c3e332197683fc9f80ea1782758"
+  },
+  "status": "IMPLEMENTED_AND_EVALUATED",
+  "validation": {
+    "artifacts": {
+      "boundary-audit.json": {
+        "sha256": "f12d0ddd98d182c40c807243aa2b9d919a30a042474cb4dbc236a5ae3c436154"
+      },
+      "tests.log": {
+        "sha256": "0178df190c62d9989eee692a58cfbef1ac56e1c00fe2ab201aa64b4abb365229"
+      }
+    },
+    "boundary_audit": "PASS",
+    "g9_control_implementations_unchanged": true,
+    "javascript_syntax": "PASS",
+    "source_sha256": {
+      "tests/test_acquisition.py": "b26db7d3f0d5e300c1e0650ec97a6886773422a7ff9f05541d0d48cb3fc3a254",
+      "tests/test_continuous.py": "bf44d0632cb66b7d7e75c4312b12f78c009a51e4266327f5c0d907f938dd8342",
+      "tests/test_cost_aware.py": "dfce5f0b595c68a6683b338442764d0af4f42a4413975bf11a69f4a7305ed326",
+      "tests/test_discovery.py": "ddfe915a261ab738f052abc3060d3b30b73e078abc5e1f43dde746b66e423b37",
+      "tests/test_scale.py": "9992b16cc5c1795669e05a96163128077fd6fd916698586098681c6563d3f711",
+      "tests/test_structural_memory.py": "c8d5995c6f7da0bed000c32caf52e191023cae48e5d511d06885014ad77e1b16",
+      "tools/audit_boundaries.py": "e420d898ec0f727f0cae27cb50211e940ea704b20148de258dcbdbec88afde96"
+    },
+    "unit_tests": {
+      "passed": 30,
+      "seconds": 42.83
+    }
+  }
+}
